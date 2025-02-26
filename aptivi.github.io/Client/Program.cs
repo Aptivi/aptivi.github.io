@@ -1,5 +1,4 @@
-﻿using aptivi.github.io.Data;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+﻿using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
@@ -15,9 +14,6 @@ namespace aptivi.github.io.Client
             builder.RootComponents.Add<App>("#app");
 
 			builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-            // Add necessary services
-            builder.Services.AddSingleton<ProjectService>();
 
 			await builder.Build().RunAsync();
         }

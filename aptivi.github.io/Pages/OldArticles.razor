@@ -1,0 +1,66 @@
+﻿@page "/old-articles"
+
+<PageTitle>Old Articles - Aptivi</PageTitle>
+
+@using System.Threading;
+@using System.Net;
+@using System.Text;
+@using aptivi.github.io.Data
+@using System.IO
+@using System.Text.Json
+@inject NavigationManager NavManager
+
+<Hero Title="Old Articles">
+	Here lists all our old articles that have been archived and that we think that it's worth
+	archiving.
+</Hero>
+
+@if (articles is not null)
+{
+	<div class="row mb-3">
+		@foreach (var article in articles)
+		{
+			<div class="col-lg-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="icon-square-projects">
+							<img src="assets/logos/aptivi-logo-transparent-ios.png" height="128" width="128" />
+						</div>
+						<h5 class="card-title">@article.ArticleDate</h5>
+						<p class="card-text">@article.ArticleTitle</p>
+						<div class="di-grid gap-2 d-sm-flex">
+							<a href="@article.ArticleLink" class="btn btn-primary">Read</a>
+							@if (article.ArticleAttachments is not null)
+							{
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Attachments</button>
+									<ul class="dropdown-menu jumbotron translucency-rule">
+										<li><h6 class="dropdown-header user-select-none">Attachments</h6></li>
+										@foreach (string attachment in article.ArticleAttachments)
+										{
+											string fileName = attachment.Substring(attachment.LastIndexOf('/') + 1);
+											<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo(attachment))"><span class="fa fa-file-download" aria-hidden="true" /> @fileName</a></li>
+										}
+									</ul>
+								</div>
+							}
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+}
+
+@code {
+	private static OldArticle[] articles;
+
+	protected override async Task OnInitializedAsync()
+	{
+		if (articles is null)
+		{
+			Stream stream = typeof(OldArticle).Assembly.GetManifestResourceStream("aptivi.github.io.Resources.OldArticles.json");
+			articles = (OldArticle[])await JsonSerializer.DeserializeAsync(stream, typeof(OldArticle[]));
+		}
+	}
+}

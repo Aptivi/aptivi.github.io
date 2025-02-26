@@ -1,0 +1,145 @@
+[
+  {
+    "ProjectName": "Nitrocid KS",
+    "Description": "Nitrocid KS simulates our future-planned kernel, Nitrocid Kernel! It is made entirely in .NET with multiplatform support.",
+    "ProjectSlug": "Nitrocid",
+    "ProjectGBSlug": "nitrocid-ks-manual",
+    "NuGetPackages": [
+      "KS"
+    ],
+    "ProjectImageName": "NitrocidKS",
+    "ProjectHasLanding": true
+  },
+  {
+    "ProjectName": "dotify",
+    "Description": "Dotify allows you to create a dotfiles repository right from your Linux user profile easily. It supports dotfolders, too! And not only create the repository, but manage it and synchronize it to other systems in your network.",
+    "ProjectSlug": "dotify",
+    "ProjectGBSlug": "dotify-manual"
+  },
+  {
+    "ProjectName": "uprepos",
+    "Description": "This program aids in updating all your existing Git repositories in your Git library. This saves you time from having to run git fetch and pull individually.",
+    "ProjectSlug": "uprepos",
+    "ProjectGBSlug": "uprepos-manual"
+  },
+  {
+    "ProjectName": "pushrepos",
+    "Description": "This program aids in pushing all your existing Git repositories to the remote if you made multiple changes to multiple repos. This simplifies from writing individual commit messages and pushing them to just one command.",
+    "ProjectSlug": "pushrepos",
+    "ProjectGBSlug": "pushrepos-manual"
+  },
+  {
+    "ProjectName": "VisualCard",
+    "Description": "This library aims to parse all kinds of contact files, including the VCard 4 files. It can be used in contact and phone applications.",
+    "ProjectSlug": "VisualCard",
+    "ProjectGBSlug": "visualcard-manual",
+    "NuGetPackages": [
+      "VisualCard",
+      "VisualCard.Calendar",
+      "VisualCard.Extras"
+    ]
+  },
+  {
+    "ProjectName": "Terminaux",
+    "Description": "This library aims to be the most advanced console manipulation library for your console applications. This library allows you to manipulate with the console, like colors, color selection, choices, inputs, text writing, and more.",
+    "ProjectSlug": "Terminaux",
+    "ProjectGBSlug": "terminaux-manual",
+    "NuGetPackages": [
+      "Terminaux",
+      "Terminaux.Images"
+    ]
+  },
+  {
+    "ProjectName": "BassBoom",
+    "Description": "A cross-platform music app and library",
+    "ProjectSlug": "BassBoom",
+    "ProjectGBSlug": "bassboom-manual",
+    "NuGetPackages": [
+      "BassBoom.Basolia"
+    ],
+    "ProjectHasLanding": true
+  },
+  {
+    "ProjectName": "SpecProbe",
+    "Description": "A super-fast library that gets hardware information directly from your system",
+    "ProjectSlug": "SpecProbe",
+    "ProjectGBSlug": "specprobe-manual",
+    "NuGetPackages": [
+      "SpecProbe",
+      "SpecProbe.Loader",
+      "SpecProbe.Software"
+    ]
+  },
+  {
+    "ProjectName": "Textify",
+    "Description": "A text manipulation library for C# and Visual Basic",
+    "ProjectSlug": "Textify",
+    "ProjectGBSlug": "textify-manual", 
+    "NuGetPackages": [
+        "Textify.Offline",
+        "Textify.Data"
+    ]
+  },
+  {
+    "ProjectName": "Nettify",
+    "Description": "Internet accessory tools for C# and Visual Basic",
+    "ProjectSlug": "Nettify",
+    "ProjectGBSlug": "nettify-manual", 
+    "NuGetPackages": [
+        "Nettify"
+    ]
+  },
+  {
+    "ProjectName": "NetLimDisable",
+    "Description": "Disables the WLAN AutoConfig bad state tracking for Windows 10 or later",
+    "ProjectSlug": "NetLimDisable",
+    "ProjectGBSlug": "aptivi/useful-tools/fix-windows-random-disconnections", 
+    "ProjectImageName": "WinPowerTools",
+    "ProjectOrg": "WPT"
+  },
+  {
+    "ProjectName": "Magico",
+    "Description": "A C# library that allows you to do various magic tricks, such as IEnumerable and file magic numbers",
+    "ProjectSlug": "Magico",
+    "ProjectGBSlug": "magico-manual", 
+    "NuGetPackages": [
+        "Magico"
+    ]
+  },
+  {
+    "ProjectName": "ChemiStar",
+    "Description": "Managed periodic table of elements querying for C# applications",
+    "ProjectSlug": "ChemiStar",
+    "ProjectGBSlug": "chemistar-manual", 
+    "NuGetPackages": [
+        "ChemiStar"
+    ]
+  },
+  {
+    "ProjectName": "Metalinker",
+    "Description": "Metalink 3.0 and 4.0 parser for C# applications that download big files",
+    "ProjectSlug": "Metalinker",
+    "ProjectGBSlug": "metalinker-manual", 
+    "NuGetPackages": [
+        "Metalinker"
+    ]
+  },
+  {
+    "ProjectName": "BskyId",
+    "Description": "A very small shell script that allows you to get your BlueSky ID from your handle",
+    "ProjectSlug": "BskyId",
+    "ProjectGBSlug": "bskyid-manual"
+  },
+  {
+    "ProjectName": "Aptivestigate",
+    "Description": "Crash handler and logging library for C#",
+    "ProjectSlug": "Aptivestigate",
+    "ProjectGBSlug": "aptivestigate-manual", 
+    "NuGetPackages": [
+        "Aptivestigate",
+        "Aptivestigate.Log4Net",
+        "Aptivestigate.Serilog",
+        "Aptivestigate.NLog"
+    ]
+  }
+]

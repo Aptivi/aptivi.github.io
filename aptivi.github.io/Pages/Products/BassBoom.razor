@@ -1,0 +1,100 @@
+﻿@page "/BassBoom"
+@inject NavigationManager NavManager
+@using aptivi.github.io.Data
+
+<PageTitle>BassBoom - Aptivi</PageTitle>
+
+<Hero Title="BassBoom" ImageSource="assets/applogos/OfficialAppIcon-BassBoom-512.png" Buttons="@DownloadCallbacks">
+	A cross-platform music player, written in C#.
+</Hero>
+
+<body>
+    <Jumbotron ExtraStyles="background: center; background-image: url('assets/products/bassboom/bb-m-01.png'); background-size: cover; background-repeat: no-repeat; background-position: right top" Title="What is BassBoom?">
+		BassBoom is an application and a library, written in .NET with C# as the programming
+		langauge, that allows you to play music, sounds, and online radio stations effortlessly,
+		without having to write low-level code. This uses the embedded MPG123 library as a backend
+		for playing audio, which is the main goal of BassBoom. It uses your platform's audio APIs
+		to be able to play your favorite songs. To ensure smooth playback for sound effects and other
+		features, BassBoom provides the Play-n-Forget technique that allows your applications to
+		play such sounds in certain events, such as when a key is pressed.
+	</Jumbotron>
+	<Features FeatureArray="@AppFeatures" />
+	<Carousel Id="bb-slides" Slides="@Slides" />
+	<br />
+	<br />
+	<Jumbotron ExtraStyles="background: center; background-image: url('assets/products/bassboom/bb-m-01.png'); background-size: cover; background-repeat: no-repeat; background-position: right top" Title="Can it play radio stations?">
+		Yes! BassBoom can not only play regular music files that are found in your hard disk, but
+		it can also play streamable content, which includes radio stations! You can listen to all
+		MPEG-compatible radio stations, just like how you would do it in a real music player. The
+		only time that we require an active internet connection is when you're trying to play
+		streams available on the internet. You can also take a look at the online radio station
+		information when it's playing, regardless of whether's it's a Shoutcast stream or an
+		IceCast stream.
+	</Jumbotron>
+	<HeroScreenshot Title="Get it!" TitleImageSource="assets/applogos/OfficialAppIcon-BassBoom-512.png" ImageSource="assets/products/bassboom/bb-01.png" Buttons="@DownloadCallbacks">
+		Try out BassBoom today by clicking on the buttons below!
+	</HeroScreenshot>
+</body>
+
+@code
+{
+	FeatureDescriptor[] AppFeatures =>
+	[
+		new()
+		{
+			IconClass = "fa-solid fa-list",
+			Title = "Playlists",
+			Description =
+				"You can build a queue of songs that will be played in the order that you prefer to make " +
+				"a list of music that will make you feel either excited or relaxed."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-sliders",
+			Title = "Equalizer",
+			Description =
+				"BassBoom also allows you to adjust different levels of musical elements, from bass to " +
+				"mid to treble, to further listen to music in a way that you like the most."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-volume-high",
+			Title = "Volume Boost",
+			Description =
+				"Volume boosting allows you to increase the volume beyond 100% when either the music or " +
+				"the podcast is too low and you need to hear it loudly."
+		},
+	];
+
+	SlideDescriptor[] Slides =>
+	[
+		new()
+		{
+			Picture = "assets/products/bassboom/bb-01.png",
+			Title = "Music Player",
+			Description =
+				"Music Player allows you to play MP3 files found in your hard disk."
+		},
+		new()
+		{
+			Picture = "assets/products/bassboom/bb-02.png",
+			Title = "Radio Player",
+			Description =
+				"Radio Player allows you to play MPEG radio stations found online."
+		},
+		new()
+		{
+			Picture = "assets/products/bassboom/bb-03.png",
+			Title = "Equalizer",
+			Description =
+				"Equalizer allows you to tweak the music channels to fit your preferences."
+		},
+	];
+
+	(EventCallback, string)[] DownloadCallbacks =>
+	[
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://github.com/Aptivi/BassBoom/releases"))), "Download now"),
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://github.com/Aptivi/BassBoom"))), "Source code"),
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://aptivi.gitbook.io/aptivi/bassboom-manual"))), "Documentation")
+	];
+}

@@ -1,0 +1,99 @@
+﻿@page "/NitrocidKS"
+@inject NavigationManager NavManager
+@using aptivi.github.io.Data
+
+<PageTitle>Nitrocid KS - Aptivi</PageTitle>
+
+<Hero Title="Nitrocid KS" ImageSource="assets/applogos/OfficialAppIcon-NitrocidKS-512.png" Buttons="@DownloadCallbacks">
+	Simulates our future-planned kernel, written in C#.
+</Hero>
+
+<body>
+	<Jumbotron ExtraStyles="background: center; background-image: url('assets/products/nitrocidks/nks-m-01.png'); background-size: cover; background-repeat: no-repeat; background-position: right top" Title="What is Nitrocid KS?">
+		Nitrocid KS is a kernel simulator, written in .NET using the C# programming language, that
+		simulates our future-planned kernel, which is the Nitrocid Kernel. It's more than just a
+		kernel simulator; it's an operating system simulator that simulates a command-line shell
+		program that runs commands and programs.
+	</Jumbotron>
+	<Features FeatureArray="@AppFeatures" />
+	<Carousel Id="nks-slides" Slides="@Slides" />
+	<HeroScreenshot Title="Get it!" TitleImageSource="assets/applogos/OfficialAppIcon-NitrocidKS-512.png" ImageSource="assets/products/nitrocidks/nks-01.png" Buttons="@DownloadCallbacks">
+		Try out Nitrocid KS today by clicking on the buttons below!
+	</HeroScreenshot>
+</body>
+
+@code
+{
+	FeatureDescriptor[] AppFeatures =>
+	[
+		new()
+		{
+			IconClass = "fa-regular fa-circle-check",
+			Title = "Simple",
+			Description =
+				"We've built our application with simplicity in mind to make it easier to use with just a " +
+				"very small learning curve. This makes sure that Nitrocid can be used by the majority of the " +
+				"users."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-bolt",
+			Title = "Fast",
+			Description =
+				"Nitrocid KS continues to be faster than ever with each release. We are constantly releasing " +
+				"updates for you to be able to finish tasks and to perform operations faster than before."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-code",
+			Title = "Robust",
+			Description =
+				"For each and every Nitrocid release, we'll continue to maintain robust API to make sure that " +
+				"you have the most flexibility when it comes to maintaining your kernel mods. The API is open " +
+				"and you can use it to build your own applications that integrate with Nitrocid KS."
+		},
+	];
+
+	SlideDescriptor[] Slides =>
+	[
+		new()
+		{
+			Picture = "assets/products/nitrocidks/nks-01.png",
+			Title = "The Nitrocid Homepage",
+			Description =
+				"Nitrocid KS powers the most powerful and extensible home page yet, the screen you " +
+				"see when logging in."
+		},
+		new()
+		{
+			Picture = "assets/products/nitrocidks/nks-02.png",
+			Title = "Stylish Lock Screen",
+			Description =
+				"Nitrocid KS contains a modern lock screen that you can customize to your heart's " +
+				"content."
+		},
+		new()
+		{
+			Picture = "assets/products/nitrocidks/nks-03.png",
+			Title = "The UESH Shell",
+			Description =
+				"Nitrocid KS was born with the UESH shell that constantly gets stronger every new " +
+				"version release."
+		},
+		new()
+		{
+			Picture = "assets/products/nitrocidks/nks-04.png",
+			Title = "Interactive TUIs",
+			Description =
+				"Nitrocid KS uses the interactive TUIs to make tasks easier than never before on " +
+				"the textual environment."
+		},
+	];
+
+	(EventCallback, string)[] DownloadCallbacks =>
+	[
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://github.com/Aptivi/Nitrocid/releases"))), "Download now"),
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://github.com/Aptivi/Nitrocid"))), "Source code"),
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://aptivi.gitbook.io/aptivi/nitrocid-ks-manual"))), "Documentation")
+	];
+}

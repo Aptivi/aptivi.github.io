@@ -1,10 +1,14 @@
 ﻿@page "/"
+@using aptivi.github.io.Data
+@inject NavigationManager NavManager
 
 <PageTitle>Index</PageTitle>
-<MainTitle/>
+<Hero Title="Welcome to Aptivi!">
+	...where tech changes.
+</Hero>
 
 <body>
-	<CardPicture Title="Who are we?">
+	<Jumbotron ExtraStyles="background: center; background-image: url('assets/pictures/aptivi-bg-2k.png'); background-size: cover; background-repeat: no-repeat; background-position: right top" Title="Who are we?">
 		We, Aptivi, were established in 2014 as an initial PC repair and expertise center to save the world.
 		Over time, we are getting expanded to programming, so we have made some of the projects that we are
 		proud of. We are not only interested in PCs, but also interested in technology in general, which is
@@ -13,35 +17,54 @@
 		“Prism of the Tech Future.” We're established as an independent community on 2014 when we were
 		nameless, and we constantly deliver the best solutions to all the problems you may be facing, as well
 		as we innovate new ideas for our new projects.
-	</CardPicture>
-	<strong>Here are the points in which we're proud of:</strong>
-	<br />
-	<br />
-	<ul>
-		<li>
-			<strong>We care about our products!</strong><br />
-			Our products are made with our own extensive care and our own strict quality testing procedures,
-			ensuring that no life-threatening and product-breaking problems occur. We make sure that our
-			products will be competently tested before their first release to ensure that your user
-			experience is always the most straightforward.
-		</li>
-		<li>
-			<strong>We have a welcoming community!</strong><br />
-			Our community keeps getting expanded during our lifetime. We make sure that our community will
-			remain committed in helping you and our other end-users concerning your difficulties regarding
-			our products while still maintaining the high bar for our own products to deliver the most
-			helpful customer service.
-		</li>
-		<li>
-			<strong>We 💜 technology!</strong><br />
-			Our love of technology allows us to be formed as both the community and the company, because
-			it is all about us. We focus on improving the field that we love, and we give and take as
-			mutual relationships with you and us to ensure that you don't miss anything related to
-			technology.
-		</li>
-	</ul>
+	</Jumbotron>
+	<Features FeatureArray="@ProudPoints" />
+	<Hero Title="Explore our work" Buttons="@DiscoverCallbacks">
+		If you are curious as to what we do, why not explore our projects? Just click on one of the below
+		buttons to start discovering our work!
+	</Hero>
 </body>
 
-<ContactBox Title="Contact us!">
-	You can contact us using the following links:
-</ContactBox>
+@code
+{
+	FeatureDescriptor[] ProudPoints =>
+	[
+		new()
+		{
+		    IconClass = "fa-solid fa-cube",
+			Title = "We care about our products!",
+			Description =
+				"Our products are made with our own extensive care and our own strict quality testing " +
+				"procedures, ensuring that no life-threatening and product-breaking problems occur. " +
+				"We make sure that our products will be competently tested before their first release " +
+				"to ensure that your user experience is always the most straightforward."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-hand-holding-heart",
+			Title = "We have a welcoming community!",
+			Description =
+				"Our community keeps getting expanded during our lifetime. We make sure that our community " +
+				"will remain committed in helping you and our other end-users concerning your difficulties " +
+				"regarding our products while still maintaining the high bar for our own products to deliver " +
+				"the most helpful customer service."
+		},
+		new()
+		{
+		    IconClass = "fa-solid fa-heart",
+			Title = "We love technology!",
+			Description =
+				"Our love of technology allows us to be formed as both the community and the company, because " +
+				"it is all about us. We focus on improving the field that we love, and we give and take as " +
+				"mutual relationships with you and us to ensure that you don't miss anything related to " +
+				"technology."
+		},
+	];
+
+	(EventCallback, string)[] DiscoverCallbacks =>
+	[
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("/projects"))), "Projects"),
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("/downloads"))), "Downloads"),
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://aptivi.gitbook.io"))), "GitBook")
+	];
+}
