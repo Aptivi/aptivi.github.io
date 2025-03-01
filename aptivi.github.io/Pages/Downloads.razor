@@ -24,6 +24,17 @@
 		new()
 		{
 			IconClass = "fa fa-file-download",
+			Title = "Official Aptivi Branding",
+			Buttons = [
+				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://officialaptivi.wordpress.com/2025/02/28/official-aptivi-branding-is-now-downloadable/"))), "Download")
+			],
+			Description =
+				"This file contains all official Aptivi assets (wallpapers for different screen sizes and logo in " +
+				"different versions)."
+		},
+		new()
+		{
+			IconClass = "fa fa-file-download",
 			Title = "Collection of Distorted Wallpapers",
 			Buttons = [
 				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://mir.cr/3JY4DTZ1"))), "Download")
