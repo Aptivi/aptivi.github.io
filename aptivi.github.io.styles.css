@@ -1,0 +1,52 @@
+/* /Shared/MainLayout.razor.rz.scp.css */
+.page[b-e2slix75g4] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-e2slix75g4] {
+    flex: 1;
+}
+
+.page[b-e2slix75g4] {
+    flex-direction: row;
+}
+
+.sidebar[b-e2slix75g4] {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    z-index: 1;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding-right: 2rem;
+    padding-left: 1rem;
+}
+/* /Shared/NavMenu.razor.rz.scp.css */
+.nav-item[b-bqqyygtbjk] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 0.1rem !important;
+    padding-right: 0.1rem !important;
+}
+
+    .nav-item[b-bqqyygtbjk]  a {
+        color: white;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+        .nav-item[b-bqqyygtbjk]  a.active {
+            background-color: #432a4c70;
+            color: white;
+        }
+
+        .nav-item[b-bqqyygtbjk]  a:hover {
+            background-color: #432a4c70;
+            color: white;
+        }
