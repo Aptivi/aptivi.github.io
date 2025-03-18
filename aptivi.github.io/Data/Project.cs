@@ -10,5 +10,6 @@ namespace aptivi.github.io.Data
         public string ProjectImageName { get; set; }
         public string ProjectOrg { get; set; }
         public bool ProjectHasLanding { get; set; }
+        public ProjectSupportPolicy[] ProjectSupportPolicy { get; set; }
     }
 }

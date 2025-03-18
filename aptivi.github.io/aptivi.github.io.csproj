@@ -21,4 +21,8 @@
     <EmbeddedResource Include="Resources/*.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="Resources\Status.json" />
+  </ItemGroup>
+
 </Project>

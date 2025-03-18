@@ -201,6 +201,16 @@ tbody, td, tfoot, th, thead, tr {
     background-color: rgba(2, 1, 67, 0.5) !important;
 }
 
+.tooltip-apt {
+    font-family: Inter, sans-serif, 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    --bs-tooltip-bg: #C390D9;
+    --bs-tooltip-color: #010022;
+    --bs-tooltip-max-width: 700px;
+    --bs-tooltip-border-radius: 0.5em;
+    --bs-tooltip-arrow-width: 0px;
+    --bs-tooltip-arrow-height: 0px;
+}
+
 .sub {
     font-style: oblique;
     font-size: smaller;

@@ -1,0 +1,50 @@
+[
+    {
+        "SectionName": "Website",
+        "Incidents": [
+            {
+                "IncidentName": "Outage",
+                "IncidentDescription": "We are currently experiencing outage in the website.",
+                "IncidentTimeline": [
+                    {
+                        "TimelineName": "Completed",
+                        "TimelineDescription": "We have restored the website back to its original state.",
+                        "TimelineDateTime": "03/18/2025 15:11:43"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "SectionName": "Blog",
+        "Incidents": [
+            {
+                "IncidentName": "Outage",
+                "IncidentDescription": "We are currently experiencing outage in the blog.",
+                "IncidentTimeline": [
+                    {
+                        "TimelineName": "Completed",
+                        "TimelineDescription": "We have restored the blog back to its original state.",
+                        "TimelineDateTime": "03/18/2025 15:11:43"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "SectionName": "Infrastructure",
+        "Incidents": [
+            {
+                "IncidentName": "Outage",
+                "IncidentDescription": "We are currently experiencing rolling blackouts that are longer than usual.",
+                "IncidentTimeline": [
+                    {
+                        "TimelineName": "Completed",
+                        "TimelineDescription": "We have installed solar power as an alternative electricity source.",
+                        "TimelineDateTime": "03/18/2025 15:11:43"
+                    }
+                ]
+            }
+        ]
+    }
+]
