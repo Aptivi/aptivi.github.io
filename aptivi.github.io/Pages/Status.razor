@@ -1,0 +1,103 @@
+﻿@page "/status"
+
+<PageTitle>Status - Aptivi</PageTitle>
+
+@using System.Threading;
+@using System.Net;
+@using System.Text;
+@using aptivi.github.io.Data
+@using System.IO
+@using System.Text.Json
+@inject NavigationManager NavManager
+
+<Hero Title="Service Status">
+	Here lists the service status for all the services that we run, including the website,
+	the blog, and our infrastructure. It will be updated when needed and when we have
+	available information.
+</Hero>
+
+@if (statuses is not null)
+{
+	<div class="accordion">
+		@foreach (var status in statuses)
+		{
+			int incidentId = 0;
+			<div class="accordion-item jumbotron">
+				<h2 class="accordion-header">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#incidents-@status.SectionName" aria-expanded="true" aria-controls="incidents-@status.SectionName">
+						@status.SectionName
+					</button>
+				</h2>
+				<div id="incidents-@status.SectionName" class="accordion-collapse collapse">
+					<div class="accordion-body">
+						@if (status.Incidents is not null && status.Incidents.Length > 0)
+						{
+							<div class="accordion">
+								@foreach (var incident in status.Incidents)
+								{
+									int timelineId = 0;
+									<div class="accordion-item jumbotron">
+										<h2 class="accordion-header">
+											<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#incidents-@status.SectionName-incident-@incidentId" aria-expanded="true" aria-controls="incidents-@status.SectionName-incident-@incidentId">
+												@incident.IncidentName
+											</button>
+										</h2>
+										<div id="incidents-@status.SectionName-incident-@incidentId" class="accordion-collapse collapse">
+											<div class="accordion-body">
+												<p>@incident.IncidentDescription</p>
+												@if (incident.IncidentTimeline is not null && incident.IncidentTimeline.Length > 0)
+												{
+													<div class="accordion">
+														@foreach (var timeline in incident.IncidentTimeline)
+														{
+															DateTimeOffset dateStart = DateTimeHelpers.GetDateTimeFrom(timeline.TimelineDateTime);
+															<div class="accordion-item jumbotron">
+																<h2 class="accordion-header">
+																	<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#incidents-@status.SectionName-incident-@incidentId-timeline-@timelineId" aria-expanded="true" aria-controls="incidents-@status.SectionName-incident-@incidentId-timeline-@timelineId">
+																		@timeline.TimelineName @@ @dateStart
+																	</button>
+																</h2>
+																<div id="incidents-@status.SectionName-incident-@incidentId-timeline-@timelineId" class="accordion-collapse collapse">
+																	<div class="accordion-body">
+																		<p>@timeline.TimelineDescription</p>
+																	</div>
+																</div>
+															</div>
+															timelineId++;
+														}
+													</div>
+												}
+												else
+												{
+													<p>There is no information about the incident timeline yet. This means that this issue has been only discovered.</p>
+												}
+											</div>
+										</div>
+									</div>
+									incidentId++;
+								}
+							</div>
+						}
+						else
+						{
+							<p>There are no incidents yet in this category. This usually means that everything is working perfectly.</p>
+						}
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+}
+
+@code {
+	private static StatusSection[] statuses;
+
+	protected override async Task OnInitializedAsync()
+	{
+		if (statuses is null)
+		{
+			Stream stream = typeof(StatusSection).Assembly.GetManifestResourceStream("aptivi.github.io.Resources.Status.json");
+			statuses = (StatusSection[])await JsonSerializer.DeserializeAsync(stream, typeof(StatusSection[]));
+		}
+	}
+}

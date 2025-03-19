@@ -250,3 +250,25 @@ tbody, td, tfoot, th, thead, tr {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
+
+.accordion-header {
+    border-radius: inherit !important;
+}
+
+.accordion-button {
+    color: white;
+    background-color: #752efd;
+    border-color: #D67DFF;
+    border-width: 2px;
+    border-radius: inherit !important;
+    box-shadow: none;
+}
+
+    .accordion-button:not(.collapsed) {
+        color: white;
+        background-color: #752efd;
+        border-color: #D67DFF;
+        border-width: 2px;
+        border-radius: inherit !important;
+        box-shadow: none;
+    }
