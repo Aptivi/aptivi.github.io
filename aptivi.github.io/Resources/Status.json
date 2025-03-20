@@ -1,26 +1,30 @@
 [
-    {
-        "SectionName": "Website",
-        "Incidents": [
-
+  {
+    "SectionName": "Website",
+    "Incidents": []
+  },
+  {
+    "SectionName": "Blog",
+    "Incidents": []
+  },
+  {
+    "SectionName": "Infrastructure",
+    "Incidents": []
+  },
+  {
+    "SectionName": "Projects",
+    "Incidents": [
+      {
+        "IncidentName": "Nettify - ISP mail tracking outage",
+        "IncidentDescription": "We\u0027re currently experiencing problems getting a list of ISP mail information for the automatic mail configuration detection feature on Nettify.",
+        "IncidentTimeline": [
+          {
+            "TimelineName": "Working on it",
+            "TimelineDescription": "We are currently making changes to Nettify to better utilize Thunderbird\u0027s resources by using submodules instead of \u0022web scraping.\u0022",
+            "TimelineDateTime": "03/20/2025 16:17:14"
+          }
         ]
-    },
-    {
-        "SectionName": "Blog",
-        "Incidents": [
-
-        ]
-    },
-    {
-        "SectionName": "Infrastructure",
-        "Incidents": [
-
-        ]
-    },
-    {
-        "SectionName": "Projects",
-        "Incidents": [
-
-        ]
-    }
+      }
+    ]
+  }
 ]
