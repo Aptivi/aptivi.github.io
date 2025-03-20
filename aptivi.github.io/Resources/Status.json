@@ -32,6 +32,11 @@
             "TimelineName": "Development of 1.5.5.2 ends",
             "TimelineDescription": "We\u0027ve released 1.5.5.2, and it will be available to NuGet soon.",
             "TimelineDateTime": "03/20/2025 17:23:59"
+          },
+          {
+            "TimelineName": "Incident resolved!",
+            "TimelineDescription": "We have resolved the incident, and the Nettify development branch should work again. To the Thunderbird team, we\u0027ll make an apology post in our blog soon; we are very sorry about this.",
+            "TimelineDateTime": "03/20/2025 17:29:04"
           }
         ]
       }
