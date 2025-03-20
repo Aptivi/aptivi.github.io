@@ -27,6 +27,11 @@
             "TimelineName": "Development of 1.5.5.2 starts",
             "TimelineDescription": "We have started development of Nettify v1.5.5.2 that fixes this problem in future canary builds.",
             "TimelineDateTime": "03/20/2025 17:14:39"
+          },
+          {
+            "TimelineName": "Development of 1.5.5.2 ends",
+            "TimelineDescription": "We\u0027ve released 1.5.5.2, and it will be available to NuGet soon.",
+            "TimelineDateTime": "03/20/2025 17:23:59"
           }
         ]
       }
