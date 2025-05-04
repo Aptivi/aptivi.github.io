@@ -255,9 +255,16 @@ tbody, td, tfoot, th, thead, tr {
     border-radius: inherit !important;
 }
 
+.accordion-item:not(:first-of-type) {
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: #D67DFF;
+    margin-top: 10px;
+}
+
 .accordion-button {
     color: white;
-    background-color: #752efd;
+    background-color: #020143;
     border-color: #D67DFF;
     border-width: 2px;
     border-radius: inherit !important;
@@ -266,7 +273,7 @@ tbody, td, tfoot, th, thead, tr {
 
     .accordion-button:not(.collapsed) {
         color: white;
-        background-color: #752efd;
+        background-color: #020143;
         border-color: #D67DFF;
         border-width: 2px;
         border-radius: inherit !important;
