@@ -190,5 +190,14 @@
             "Aptivestigate.Serilog",
             "Aptivestigate.NLog"
         ]
+    },
+    {
+        "ProjectName": "LocaleStation",
+        "Description": "String localization tools for international C# applications",
+        "ProjectSlug": "LocaleStation",
+        "ProjectGBSlug": "localestation-manual",
+        "NuGetPackages": [
+            "LocaleStation"
+        ]
     }
 ]
