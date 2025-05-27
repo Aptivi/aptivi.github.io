@@ -198,6 +198,7 @@
         "ProjectGBSlug": "localestation-manual",
         "NuGetPackages": [
             "LocaleStation"
-        ]
+        ],
+        "ProjectImageLink": "assets/OfficialAppIcon-LocaleStation-512.png"
     }
 ]
