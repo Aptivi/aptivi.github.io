@@ -31,6 +31,8 @@ gh-pages:
     - cp -a aptivi.github.io/bin/Release/net9.0/publish/wwwroot/* .
     - rm -r aptivi.github.io
     - git add .
+    - git config user.email "ceo@aptivi.anonaddy.com"
+    - git config user.name "Aptivi"
     - git commit -m "Deployed from $CI_COMMIT_SHA"
     - 'git remote add github https://AptiviCEO:${GH_APIKEY}github.com/Aptivi/aptivi.github.io'
     - git push github
