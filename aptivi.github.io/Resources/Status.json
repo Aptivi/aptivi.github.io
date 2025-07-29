@@ -9,7 +9,24 @@
   },
   {
     "SectionName": "Infrastructure",
-    "Incidents": []
+    "Incidents": [
+      {
+        "IncidentName": "GitHub Actions workflow interruption",
+        "IncidentDescription": "We\u0027re currently experiencing issues related to GitHub Actions not running due to a hidden non-payment of $0 in the GitHub Actions usage, which we couldn\u0027t solve ourselves without relying on GitHub Support who didn\u0027t answer our query yet. As a result, all releases and website updates were stopped.",
+        "IncidentTimeline": [
+          {
+            "TimelineName": "Releases are back up!",
+            "TimelineDescription": "The releases are now back up and running thanks to GitLab CI/CD workflows!",
+            "TimelineDateTime": "07/29/2025 15:24:19"
+          },
+          {
+            "TimelineName": "Website is back up!",
+            "TimelineDescription": "We\u0027ve managed to fix the main website deployment workflow by migrating the deployment operation to GitLab while updating GitHub\u0027s branch with the gh-pages branch!",
+            "TimelineDateTime": "07/29/2025 15:25:03"
+          }
+        ]
+      }
+    ]
   },
   {
     "SectionName": "Projects",
@@ -37,6 +54,17 @@
             "TimelineName": "Incident resolved!",
             "TimelineDescription": "We have resolved the incident, and the Nettify development branch should work again. To the Thunderbird team, we\u0027ll make an apology post in our blog soon; we are very sorry about this.",
             "TimelineDateTime": "03/20/2025 17:29:04"
+          }
+        ]
+      },
+      {
+        "IncidentName": "All projects - API documentation not updated for over a month",
+        "IncidentDescription": "We\u0027re experiencing issues updating the API documentation due to GitHub workflows not working in our organization.",
+        "IncidentTimeline": [
+          {
+            "TimelineName": "Issue reported",
+            "TimelineDescription": "We\u0027ve confirmed that the issue lies on GitHub workflows not working.",
+            "TimelineDateTime": "07/29/2025 15:27:20"
           }
         ]
       }
