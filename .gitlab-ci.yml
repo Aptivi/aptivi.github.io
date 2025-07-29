@@ -1,9 +1,11 @@
-image: mcr.microsoft.com/dotnet/aspnet:9.0-noble
+image: mcr.microsoft.com/dotnet/sdk:9.0-noble
 create-pages:
   pages:
     publish: aptivi.github.io/bin/Release/net9.0/publish/wwwroot
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+  before_script:
+    - dotnet workload install wasm-tools
   script:
     - dotnet publish --configuration Release
     - cp aptivi.github.io/bin/Release/net9.0/publish/wwwroot/index.html
