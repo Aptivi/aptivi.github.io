@@ -1,5 +1,11 @@
 image: mcr.microsoft.com/dotnet/sdk:9.0-noble
+
+stages:
+  - deploy
+  - postdeploy
+
 create-pages:
+  stage: deploy
   pages:
     publish: aptivi.github.io/bin/Release/net9.0/publish/wwwroot
   rules:
@@ -15,6 +21,7 @@ create-pages:
       aptivi.github.io/bin/Release/net9.0/publish/wwwroot/404.html
 
 gh-pages:
+  stage: postdeploy
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
   script:
