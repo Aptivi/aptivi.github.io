@@ -23,6 +23,11 @@
             "TimelineName": "Website is back up!",
             "TimelineDescription": "We\u0027ve managed to fix the main website deployment workflow by migrating the deployment operation to GitLab while updating GitHub\u0027s branch with the gh-pages branch!",
             "TimelineDateTime": "07/29/2025 15:25:03"
+          },
+          {
+            "TimelineName": "Terminaux API doc back up!",
+            "TimelineDescription": "We\u0027ve managed to get the Terminaux API doc to build again from GitLab!",
+            "TimelineDateTime": "07/29/2025 16:06:28"
           }
         ]
       }
@@ -65,6 +70,11 @@
             "TimelineName": "Issue reported",
             "TimelineDescription": "We\u0027ve confirmed that the issue lies on GitHub workflows not working.",
             "TimelineDateTime": "07/29/2025 15:27:20"
+          },
+          {
+            "TimelineName": "API doc rollout started",
+            "TimelineDescription": "We\u0027ve managed to fix the situation with Terminaux 7.0 as we\u0027re getting closer to the final release! The rollout will start soon.",
+            "TimelineDateTime": "07/29/2025 16:09:30"
           }
         ]
       }
