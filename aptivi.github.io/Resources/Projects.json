@@ -3,6 +3,7 @@
         "ProjectName": "Nitrocid KS",
         "Description": "Nitrocid KS simulates our future-planned kernel, Nitrocid Kernel! It is made entirely in .NET with multiplatform support.",
         "ProjectSlug": "Nitrocid",
+        "ProjectGLSlug": "main/Nitrocid",
         "ProjectGBSlug": "nitrocid-ks-manual",
         "NuGetPackages": [
             "KS"
@@ -31,24 +32,28 @@
         "ProjectName": "dotify",
         "Description": "Dotify allows you to create a dotfiles repository right from your Linux user profile easily. It supports dotfolders, too! And not only create the repository, but manage it and synchronize it to other systems in your network.",
         "ProjectSlug": "dotify",
+        "ProjectGLSlug": "powertools/linux/dotify",
         "ProjectGBSlug": "dotify-manual"
     },
     {
         "ProjectName": "uprepos",
         "Description": "This program aids in updating all your existing Git repositories in your Git library. This saves you time from having to run git fetch and pull individually.",
         "ProjectSlug": "uprepos",
+        "ProjectGLSlug": "powertools/linux/uprepos",
         "ProjectGBSlug": "uprepos-manual"
     },
     {
         "ProjectName": "pushrepos",
         "Description": "This program aids in pushing all your existing Git repositories to the remote if you made multiple changes to multiple repos. This simplifies from writing individual commit messages and pushing them to just one command.",
         "ProjectSlug": "pushrepos",
+        "ProjectGLSlug": "powertools/linux/pushrepos",
         "ProjectGBSlug": "pushrepos-manual"
     },
     {
         "ProjectName": "VisualCard",
         "Description": "This library aims to parse all kinds of contact files, including the VCard 4 files. It can be used in contact and phone applications.",
         "ProjectSlug": "VisualCard",
+        "ProjectGLSlug": "main/VisualCard",
         "ProjectGBSlug": "visualcard-manual",
         "NuGetPackages": [
             "VisualCard",
@@ -60,6 +65,7 @@
         "ProjectName": "Terminaux",
         "Description": "This library aims to be the most advanced console manipulation library for your console applications. This library allows you to manipulate with the console, like colors, color selection, choices, inputs, text writing, and more.",
         "ProjectSlug": "Terminaux",
+        "ProjectGLSlug": "main/Terminaux",
         "ProjectGBSlug": "terminaux-manual",
         "NuGetPackages": [
             "Terminaux",
@@ -89,6 +95,7 @@
         "ProjectName": "BassBoom",
         "Description": "A cross-platform music app and library",
         "ProjectSlug": "BassBoom",
+        "ProjectGLSlug": "main/BassBoom",
         "ProjectGBSlug": "bassboom-manual",
         "NuGetPackages": [
             "BassBoom.Basolia"
@@ -103,8 +110,7 @@
             },
             {
                 "PolicySeries": "v0.2.x",
-                "PolicySupportStart": "09/16/2024",
-                "PolicySupportEnd": "09/16/2025"
+                "PolicySupportStart": "09/16/2024"
             }
         ]
     },
@@ -112,6 +118,7 @@
         "ProjectName": "SpecProbe",
         "Description": "A super-fast library that gets hardware information directly from your system",
         "ProjectSlug": "SpecProbe",
+        "ProjectGLSlug": "main/SpecProbe",
         "ProjectGBSlug": "specprobe-manual",
         "NuGetPackages": [
             "SpecProbe",
@@ -123,6 +130,7 @@
         "ProjectName": "Textify",
         "Description": "A text manipulation library for C# and Visual Basic",
         "ProjectSlug": "Textify",
+        "ProjectGLSlug": "main/Textify",
         "ProjectGBSlug": "textify-manual",
         "NuGetPackages": [
             "Textify.Offline",
@@ -133,6 +141,7 @@
         "ProjectName": "Nettify",
         "Description": "Internet accessory tools for C# and Visual Basic",
         "ProjectSlug": "Nettify",
+        "ProjectGLSlug": "main/Nettify",
         "ProjectGBSlug": "nettify-manual",
         "NuGetPackages": [
             "Nettify"
@@ -142,6 +151,7 @@
         "ProjectName": "NetLimDisable",
         "Description": "Disables the WLAN AutoConfig bad state tracking for Windows 10 or later",
         "ProjectSlug": "NetLimDisable",
+        "ProjectGLSlug": "powertools/windows/NetLimDisable",
         "ProjectGBSlug": "aptivi/useful-tools/fix-windows-random-disconnections",
         "ProjectImageName": "WinPowerTools",
         "ProjectOrg": "WPT"
@@ -150,6 +160,7 @@
         "ProjectName": "Magico",
         "Description": "A C# library that allows you to do various magic tricks, such as IEnumerable and file magic numbers",
         "ProjectSlug": "Magico",
+        "ProjectGLSlug": "main/Magico",
         "ProjectGBSlug": "magico-manual",
         "NuGetPackages": [
             "Magico"
@@ -159,6 +170,7 @@
         "ProjectName": "ChemiStar",
         "Description": "Managed periodic table of elements querying for C# applications",
         "ProjectSlug": "ChemiStar",
+        "ProjectGLSlug": "main/ChemiStar",
         "ProjectGBSlug": "chemistar-manual",
         "NuGetPackages": [
             "ChemiStar"
@@ -168,6 +180,7 @@
         "ProjectName": "Metalinker",
         "Description": "Metalink 3.0 and 4.0 parser for C# applications that download big files",
         "ProjectSlug": "Metalinker",
+        "ProjectGLSlug": "main/Metalinker",
         "ProjectGBSlug": "metalinker-manual",
         "NuGetPackages": [
             "Metalinker"
@@ -177,12 +190,14 @@
         "ProjectName": "BskyId",
         "Description": "A very small shell script that allows you to get your BlueSky ID from your handle",
         "ProjectSlug": "BskyId",
+        "ProjectGLSlug": "main/BskyId",
         "ProjectGBSlug": "bskyid-manual"
     },
     {
         "ProjectName": "Aptivestigate",
         "Description": "Crash handler and logging library for C#",
         "ProjectSlug": "Aptivestigate",
+        "ProjectGLSlug": "main/Aptivestigate",
         "ProjectGBSlug": "aptivestigate-manual",
         "NuGetPackages": [
             "Aptivestigate",
@@ -195,6 +210,7 @@
         "ProjectName": "LocaleStation",
         "Description": "String localization tools for international C# applications",
         "ProjectSlug": "LocaleStation",
+        "ProjectGLSlug": "main/LocaleStation",
         "ProjectGBSlug": "localestation-manual",
         "NuGetPackages": [
             "LocaleStation"
