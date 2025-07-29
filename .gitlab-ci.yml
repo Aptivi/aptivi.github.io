@@ -26,6 +26,7 @@ gh-pages:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
   script:
     - sed -i 's|base href="/aptivi-github-io/"|base href="/"|g' aptivi.github.io/bin/Release/net9.0/publish/wwwroot/index.html
+    - sed -i 's|base href="/aptivi-github-io/"|base href="/"|g' aptivi.github.io/bin/Release/net9.0/publish/wwwroot/404.html
     - git fetch --all
     - git checkout gh-pages
     - cp -a aptivi.github.io/bin/Release/net9.0/publish/wwwroot/* .
