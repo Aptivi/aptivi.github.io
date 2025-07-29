@@ -63,8 +63,8 @@
 
 	(EventCallback, string)[] DiscoverCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("/projects"))), "Projects"),
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("/downloads"))), "Downloads"),
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("projects"))), "Projects"),
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("downloads"))), "Downloads"),
 		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://aptivi.gitbook.io"))), "GitBook")
 	];
 }
