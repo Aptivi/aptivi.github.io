@@ -8,6 +8,7 @@ create-pages:
     - apt update
     - apt -y install python-is-python3
     - dotnet workload install wasm-tools
+    - sed -i 's|base href="/"|base href="/aptivi-github-io"|g' aptivi.github.io/wwwroot/index.html
   script:
     - dotnet publish --configuration Release
     - cp aptivi.github.io/bin/Release/net9.0/publish/wwwroot/index.html
