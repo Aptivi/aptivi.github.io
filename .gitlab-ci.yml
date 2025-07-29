@@ -29,8 +29,10 @@ gh-pages:
     - sed -i 's|base href="/aptivi-github-io/"|base href="/"|g' aptivi.github.io/bin/Release/net9.0/publish/wwwroot/404.html
     - git fetch --all
     - git checkout gh-pages
-    - cp -a aptivi.github.io/bin/Release/net9.0/publish/wwwroot/* .
-    - rm -r aptivi.github.io
+    - mv aptivi.github.io ..
+    - git rm -rf .
+    - cp -a ../aptivi.github.io/bin/Release/net9.0/publish/wwwroot/* .
+    - touch .nojekyll
     - git add .
     - git config user.email "ceo@aptivi.anonaddy.com"
     - git config user.name "Aptivi"
