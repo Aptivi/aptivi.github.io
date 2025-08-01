@@ -33,6 +33,11 @@
             "TimelineName": "API doc workflows back up!",
             "TimelineDescription": "We\u0027ve rolled out the workflow file for GitLab repos and should be running once every new version of a library is released.",
             "TimelineDateTime": "07/29/2025 17:21:57"
+          },
+          {
+            "TimelineName": "Incident partially resolved",
+            "TimelineDescription": "We\u0027ve confirmed that the incident has been partially resolved.",
+            "TimelineDateTime": "08/01/2025 19:34:27"
           }
         ]
       }
@@ -85,6 +90,11 @@
             "TimelineName": "GitLab CI for docgen rolled out",
             "TimelineDescription": "The workflow needed for gnerating documentation should roll out starting from the next release of each library.",
             "TimelineDateTime": "07/29/2025 17:21:16"
+          },
+          {
+            "TimelineName": "Incident partially resolved",
+            "TimelineDescription": "We\u0027ve confirmed that the incident has been partially resolved.",
+            "TimelineDateTime": "08/01/2025 19:34:40"
           }
         ]
       }
