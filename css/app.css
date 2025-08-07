@@ -262,8 +262,13 @@ tbody, td, tfoot, th, thead, tr {
     margin-top: 10px;
 }
 
+.accordion {
+    --bs-accordion-btn-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23D67DFF' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23D67DFF' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+}
+
 .accordion-button {
-    color: white;
+    color: #D67DFF;
     background-color: #020143;
     border-color: #D67DFF;
     border-width: 2px;
@@ -272,10 +277,15 @@ tbody, td, tfoot, th, thead, tr {
 }
 
     .accordion-button:not(.collapsed) {
-        color: white;
+        color: #D67DFF;
         background-color: #020143;
         border-color: #D67DFF;
         border-width: 2px;
         border-radius: inherit !important;
+        box-shadow: none;
+    }
+
+    .accordion-button:focus {
+        z-index: unset;
         box-shadow: none;
     }
