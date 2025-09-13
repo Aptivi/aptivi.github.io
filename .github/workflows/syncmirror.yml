@@ -1,0 +1,14 @@
+name: 'Sync with GL mirror'
+on: push
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+      - name: Add mirror auth info
+        run: git remote add alternate https://AptiviCEO:${{ secrets.GL_APIKEY }}@gitlab.com/aptivi/aptivi-github-io.git
+      - name: Push to mirror
+        run: git push alternate
