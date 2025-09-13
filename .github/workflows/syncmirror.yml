@@ -5,9 +5,10 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: 'true'
+          fetch-depth: 0
       - name: Add mirror auth info
         run: git remote add alternate https://AptiviCEO:${{ secrets.GL_APIKEY }}@gitlab.com/aptivi/aptivi-github-io.git
       - name: Push to mirror
