@@ -53,8 +53,8 @@
 										<li><hr class="dropdown-divider"></li>
 									}
                                     <li><h6 class="dropdown-header user-select-none">Source code</h6></li>
-                                    <li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://gitlab.com/aptivi/{project.ProjectGLSlug}"))"><span class="fab fa-gitlab" aria-hidden="true" /> GitLab</a></li>
-									<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://github.com/{org}/{project.ProjectSlug}"))"><span class="fab fa-github" aria-hidden="true" /> GitHub (mirror)</a></li>
+									<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://github.com/{org}/{project.ProjectSlug}"))"><span class="fab fa-github" aria-hidden="true" /> GitHub</a></li>
+									<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://gitlab.com/aptivi/{project.ProjectGLSlug}"))"><span class="fab fa-gitlab" aria-hidden="true" /> GitLab (mirror)</a></li>
 									<li><hr class="dropdown-divider"></li>
 									<li><h6 class="dropdown-header user-select-none">Documentation</h6></li>
 									<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://aptivi.gitbook.io/{project.ProjectGBSlug}"))"><span class="fa-solid fa-book" aria-hidden="true" /> GitBook manual</a></li>
