@@ -6,6 +6,10 @@
         "ProjectGLSlug": "main/Nitrocid",
         "ProjectGBSlug": "nitrocid-ks-manual",
         "NuGetPackages": [
+            "Nitrocid.Base",
+            "Nitrocid.Core",
+            "Nitrocid.Analyzers",
+            "Nitrocid.Templates",
             "KS"
         ],
         "ProjectImageName": "NitrocidKS",
@@ -15,11 +19,6 @@
                 "PolicySeries": "v0.1.0.x",
                 "PolicySupportStart": "03/11/2024",
                 "PolicySupportEnd": "03/11/2034"
-            },
-            {
-                "PolicySeries": "v0.1.1.x",
-                "PolicySupportStart": "07/23/2024",
-                "PolicySupportEnd": "04/23/2025"
             },
             {
                 "PolicySeries": "v0.1.2.x",
@@ -58,6 +57,7 @@
         "NuGetPackages": [
             "VisualCard",
             "VisualCard.Calendar",
+            "VisualCard.Common",
             "VisualCard.Extras"
         ]
     },
@@ -69,25 +69,21 @@
         "ProjectGBSlug": "terminaux-manual",
         "NuGetPackages": [
             "Terminaux",
-            "Terminaux.Images"
+            "Terminaux.Images",
+            "Terminaux.Images.Icons",
+            "Terminaux.Spectre"
         ],
         "ProjectSupportPolicy": [
             {
-                "PolicySeries": "v4.3.x",
-                "PolicySupportStart": "05/22/2024",
-                "PolicySupportEnd": "07/07/2025",
-                "PolicyUnderMaintenance": true
-            },
-            {
-                "PolicySeries": "v5.4.x",
-                "PolicySupportStart": "08/26/2024",
-                "PolicySupportEnd": "09/26/2025",
-                "PolicyUnderMaintenance": true
-            },
-            {
                 "PolicySeries": "v6.1.x",
                 "PolicySupportStart": "12/22/2024",
-                "PolicySupportEnd": "08/05/2026"
+                "PolicySupportEnd": "08/05/2026",
+                "PolicyUnderMaintenance": true
+            },
+            {
+                "PolicySeries": "7.0.x",
+                "PolicySupportStart": "8/10/2025",
+                "PolicySupportEnd": "8/5/2026"
             }
         ]
     },
@@ -98,16 +94,11 @@
         "ProjectGLSlug": "main/BassBoom",
         "ProjectGBSlug": "bassboom-manual",
         "NuGetPackages": [
-            "BassBoom.Basolia"
+            "BassBoom.Basolia",
+            "BassBoom.Native"
         ],
         "ProjectHasLanding": true,
         "ProjectSupportPolicy": [
-            {
-                "PolicySeries": "v0.1.x",
-                "PolicySupportStart": "05/31/2024",
-                "PolicySupportEnd": "05/31/2025",
-                "PolicyUnderMaintenance": true
-            },
             {
                 "PolicySeries": "v0.2.x",
                 "PolicySupportStart": "09/16/2024"
@@ -123,6 +114,7 @@
         "NuGetPackages": [
             "SpecProbe",
             "SpecProbe.Loader",
+            "SpecProbe.Native",
             "SpecProbe.Software"
         ]
     },
@@ -134,7 +126,7 @@
         "ProjectGBSlug": "textify-manual",
         "NuGetPackages": [
             "Textify.Offline",
-            "Textify.Data"
+            "Textify.Offline.Data"
         ]
     },
     {
@@ -163,7 +155,8 @@
         "ProjectGLSlug": "main/Magico",
         "ProjectGBSlug": "magico-manual",
         "NuGetPackages": [
-            "Magico"
+            "Magico",
+            "Magico.Native"
         ]
     },
     {
@@ -203,7 +196,9 @@
             "Aptivestigate",
             "Aptivestigate.Log4Net",
             "Aptivestigate.Serilog",
-            "Aptivestigate.NLog"
+            "Aptivestigate.NLog",
+            "Aptivestigate.Microsoft",
+            "Aptivestigate.ZLogger"
         ]
     },
     {
@@ -213,7 +208,8 @@
         "ProjectGLSlug": "main/LocaleStation",
         "ProjectGBSlug": "localestation-manual",
         "NuGetPackages": [
-            "LocaleStation"
+            "LocaleStation",
+            "LocaleStation.Tools"
         ],
         "ProjectImageLink": "assets/OfficialAppIcon-LocaleStation-512.png"
     }
