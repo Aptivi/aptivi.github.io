@@ -210,7 +210,6 @@
         "NuGetPackages": [
             "LocaleStation",
             "LocaleStation.Tools"
-        ],
-        "ProjectImageLink": "assets/OfficialAppIcon-LocaleStation-512.png"
+        ]
     }
 ]
