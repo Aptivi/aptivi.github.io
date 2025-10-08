@@ -46,9 +46,10 @@
 									@if (project.NuGetPackages is not null)
 									{
 										<li><h6 class="dropdown-header user-select-none">NuGet packages</h6></li>
-										@foreach (string nugetPackageName in project.NuGetPackages)
+										@foreach (var nugetPackage in project.NuGetPackages)
 										{
-											<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://nuget.org/packages/{nugetPackageName}"))"><span class="fa fa-cubes" aria-hidden="true" /> @nugetPackageName</a></li>
+											string label = !string.IsNullOrEmpty(nugetPackage.PackageLabel) ? nugetPackage.PackageLabel : nugetPackage.PackageName;
+											<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://nuget.org/packages/{nugetPackage.PackageName}"))"><span class="fa fa-cubes" aria-hidden="true" /> @label</a></li>
 										}
 										<li><hr class="dropdown-divider"></li>
 									}

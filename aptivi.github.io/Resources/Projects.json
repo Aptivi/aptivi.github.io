@@ -6,11 +6,22 @@
         "ProjectGLSlug": "main/Nitrocid",
         "ProjectGBSlug": "nitrocid-ks-manual",
         "NuGetPackages": [
-            "Nitrocid.Base",
-            "Nitrocid.Core",
-            "Nitrocid.Analyzers",
-            "Nitrocid.Templates",
-            "KS"
+            {
+                "PackageName": "Nitrocid.Base"
+            },
+            {
+                "PackageName": "Nitrocid.Core"
+            },
+            {
+                "PackageName": "Nitrocid.Analyzers"
+            },
+            {
+                "PackageName": "Nitrocid.Templates"
+            },
+            {
+                "PackageName": "KS",
+                "PackageLabel": "KS - versions <= 0.1.2.x"
+            }
         ],
         "ProjectImageName": "NitrocidKS",
         "ProjectHasLanding": true,
@@ -55,10 +66,18 @@
         "ProjectGLSlug": "main/VisualCard",
         "ProjectGBSlug": "visualcard-manual",
         "NuGetPackages": [
-            "VisualCard",
-            "VisualCard.Calendar",
-            "VisualCard.Common",
-            "VisualCard.Extras"
+            {
+                "PackageName": "VisualCard"
+            },
+            {
+                "PackageName": "VisualCard.Calendar"
+            },
+            {
+                "PackageName": "VisualCard.Common"
+            },
+            {
+                "PackageName": "VisualCard.Extras"
+            }
         ]
     },
     {
@@ -68,10 +87,18 @@
         "ProjectGLSlug": "main/Terminaux",
         "ProjectGBSlug": "terminaux-manual",
         "NuGetPackages": [
-            "Terminaux",
-            "Terminaux.Images",
-            "Terminaux.Images.Icons",
-            "Terminaux.Spectre"
+            {
+                "PackageName": "Terminaux"
+            },
+            {
+                "PackageName": "Terminaux.Images"
+            },
+            {
+                "PackageName": "Terminaux.Images.Icons"
+            },
+            {
+                "PackageName": "Terminaux.Spectre"
+            }
         ],
         "ProjectSupportPolicy": [
             {
@@ -94,8 +121,12 @@
         "ProjectGLSlug": "main/BassBoom",
         "ProjectGBSlug": "bassboom-manual",
         "NuGetPackages": [
-            "BassBoom.Basolia",
-            "BassBoom.Native"
+            {
+                "PackageName": "BassBoom.Basolia"
+            },
+            {
+                "PackageName": "BassBoom.Native"
+            }
         ],
         "ProjectHasLanding": true,
         "ProjectSupportPolicy": [
@@ -112,10 +143,18 @@
         "ProjectGLSlug": "main/SpecProbe",
         "ProjectGBSlug": "specprobe-manual",
         "NuGetPackages": [
-            "SpecProbe",
-            "SpecProbe.Loader",
-            "SpecProbe.Native",
-            "SpecProbe.Software"
+            {
+                "PackageName": "SpecProbe"
+            },
+            {
+                "PackageName": "SpecProbe.Loader"
+            },
+            {
+                "PackageName": "SpecProbe.Native"
+            },
+            {
+                "PackageName": "SpecProbe.Software"
+            }
         ]
     },
     {
@@ -125,8 +164,12 @@
         "ProjectGLSlug": "main/Textify",
         "ProjectGBSlug": "textify-manual",
         "NuGetPackages": [
-            "Textify.Offline",
-            "Textify.Offline.Data"
+            {
+                "PackageName": "Textify.Offline"
+            },
+            {
+                "PackageName": "Textify.Offline.Data"
+            }
         ]
     },
     {
@@ -136,7 +179,9 @@
         "ProjectGLSlug": "main/Nettify",
         "ProjectGBSlug": "nettify-manual",
         "NuGetPackages": [
-            "Nettify"
+            {
+                "PackageName": "Nettify"
+            }
         ]
     },
     {
@@ -155,8 +200,12 @@
         "ProjectGLSlug": "main/Magico",
         "ProjectGBSlug": "magico-manual",
         "NuGetPackages": [
-            "Magico",
-            "Magico.Native"
+            {
+                "PackageName": "Magico"
+            },
+            {
+                "PackageName": "Magico.Native"
+            }
         ]
     },
     {
@@ -166,7 +215,9 @@
         "ProjectGLSlug": "main/ChemiStar",
         "ProjectGBSlug": "chemistar-manual",
         "NuGetPackages": [
-            "ChemiStar"
+            {
+                "PackageName": "ChemiStar"
+            }
         ]
     },
     {
@@ -176,7 +227,9 @@
         "ProjectGLSlug": "main/Metalinker",
         "ProjectGBSlug": "metalinker-manual",
         "NuGetPackages": [
-            "Metalinker"
+            {
+                "PackageName": "Metalinker"
+            }
         ]
     },
     {
@@ -193,12 +246,24 @@
         "ProjectGLSlug": "main/Aptivestigate",
         "ProjectGBSlug": "aptivestigate-manual",
         "NuGetPackages": [
-            "Aptivestigate",
-            "Aptivestigate.Log4Net",
-            "Aptivestigate.Serilog",
-            "Aptivestigate.NLog",
-            "Aptivestigate.Microsoft",
-            "Aptivestigate.ZLogger"
+            {
+                "PackageName": "Aptivestigate"
+            },
+            {
+                "PackageName": "Aptivestigate.Log4Net"
+            },
+            {
+                "PackageName": "Aptivestigate.Serilog"
+            },
+            {
+                "PackageName": "Aptivestigate.NLog"
+            },
+            {
+                "PackageName": "Aptivestigate.Microsoft"
+            },
+            {
+                "PackageName": "Aptivestigate.ZLogger"
+            }
         ]
     },
     {
@@ -208,8 +273,12 @@
         "ProjectGLSlug": "main/LocaleStation",
         "ProjectGBSlug": "localestation-manual",
         "NuGetPackages": [
-            "LocaleStation",
-            "LocaleStation.Tools"
+            {
+                "PackageName": "LocaleStation"
+            },
+            {
+                "PackageName": "LocaleStation.Tools"
+            }
         ]
     }
 ]
