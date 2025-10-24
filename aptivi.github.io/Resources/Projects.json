@@ -265,20 +265,5 @@
                 "PackageName": "Aptivestigate.ZLogger"
             }
         ]
-    },
-    {
-        "ProjectName": "LocaleStation",
-        "Description": "String localization tools for international C# applications",
-        "ProjectSlug": "LocaleStation",
-        "ProjectGLSlug": "main/LocaleStation",
-        "ProjectGBSlug": "localestation-manual",
-        "NuGetPackages": [
-            {
-                "PackageName": "LocaleStation"
-            },
-            {
-                "PackageName": "LocaleStation.Tools"
-            }
-        ]
     }
 ]
