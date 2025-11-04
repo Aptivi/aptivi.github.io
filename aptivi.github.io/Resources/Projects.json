@@ -265,5 +265,17 @@
                 "PackageName": "Aptivestigate.ZLogger"
             }
         ]
+    },
+    {
+        "ProjectName": "ResourceLab",
+        "Description": "A C# library that manages the resources from different assemblies",
+        "ProjectSlug": "ResourceLab",
+        "ProjectGLSlug": "main/ResourceLab",
+        "ProjectGBSlug": "resourcelab-manual",
+        "NuGetPackages": [
+            {
+                "PackageName": "ResourceLab"
+            }
+        ]
     }
 ]
