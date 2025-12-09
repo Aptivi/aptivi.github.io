@@ -17,8 +17,6 @@ main {
     top: 0;
     text-align: center;
     z-index: 1;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     padding-right: 2rem;
     padding-left: 1rem;
 }
