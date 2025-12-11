@@ -438,3 +438,7 @@ input#qsearch.form-control, div.input-group-btn {
 .label-primary {
     background-color: #6700FF;
 }
+
+.d-sm-flex {
+    flex-wrap: wrap;
+}
