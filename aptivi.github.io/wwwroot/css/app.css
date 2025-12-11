@@ -41,6 +41,13 @@ code, pre {
     background-color: black !important;
 }
 
+.bordered {
+    border: solid;
+    border-color: #6700FF;
+    border-width: 2px;
+    border-radius: .75rem;
+}
+
 input, select {
     color: white;
     background-color: #150033;
