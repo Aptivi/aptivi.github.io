@@ -42,9 +42,12 @@
 
 @code
 {
+	bool ShowCount { get; set; }
+
 	(EventCallback, string)[] LinkCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(async () => NavManager.NavigateTo("https://drive.google.com/drive/folders/1ThBpgYP9079YVqg1ub2IAsMIxnNMxWQj?usp=sharing"))), "Download ZIP")
+		(EventCallback.Factory.Create(this, new Action(async () => NavManager.NavigateTo("https://drive.google.com/drive/folders/1ThBpgYP9079YVqg1ub2IAsMIxnNMxWQj?usp=sharing"))), "Download ZIP"),
+		(EventCallback.Factory.Create(this, new Action(async () => ShowCount = !ShowCount)), "Show count")
 	];
 
 	Dictionary<string, string> MappedCategoryNames => new()
@@ -85,7 +88,7 @@
 			if (lastCategory != category)
 			{
 				// Category doesn't match, so we need to add the paths to the finalized list before adding
-				finalizedList.Add((MappedCategoryNames[lastCategory], [.. paths]));
+				finalizedList.Add((MappedCategoryNames[lastCategory] + (ShowCount ? $" [{paths.Count}]" : ""), [.. paths]));
 				paths.Clear();
 				lastCategory = category;
 			}
@@ -93,7 +96,7 @@
 			// Add the path
 			paths.Add(path);
 		}
-		finalizedList.Add((MappedCategoryNames[lastCategory], [.. paths]));
+		finalizedList.Add((MappedCategoryNames[lastCategory] + (ShowCount ? $" [{paths.Count}]" : ""), [.. paths]));
 
 		// Return the finalized list
 		return [.. finalizedList];
