@@ -43,8 +43,31 @@
         color: #9044FF;
     }
 
+@media (min-width: 768px) {
+    .nav-pills {
+        justify-content: flex-end;
+    }
+}
+
 @media (max-width: 767px) {
     .navbar-collapse {
         margin-top: 1rem;
+        flex-basis: 100%;
+        width: 100%;
     }
+
+    .nav-pills {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item {
+        width: auto;
+        flex: 0 0 auto;
+    }
+
+        .nav-item ::deep a {
+            justify-content: center;
+        }
 }
