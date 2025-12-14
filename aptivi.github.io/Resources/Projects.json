@@ -20,7 +20,7 @@
             },
             {
                 "PackageName": "KS",
-                "PackageLabel": "KS - versions <= 0.1.2.x"
+                "PackageLabel": "KS - mod API v3.0.25.x"
             }
         ],
         "ProjectImageName": "NitrocidKS",
@@ -32,9 +32,9 @@
                 "PolicySupportEnd": "03/11/2034"
             },
             {
-                "PolicySeries": "v0.1.2.x",
-                "PolicySupportStart": "02/27/2025",
-                "PolicySupportEnd": "11/27/2025"
+                "PolicySeries": "v0.2.0.x",
+                "PolicySupportStart": "02/12/2026",
+                "PolicySupportEnd": "02/12/2036"
             }
         ]
     },
