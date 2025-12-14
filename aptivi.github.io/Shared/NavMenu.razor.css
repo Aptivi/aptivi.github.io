@@ -24,3 +24,27 @@
             background-color: unset;
             color: #9044FF;
         }
+
+.navbar-toggler {
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
+    border-radius: .75rem;
+}
+
+    .navbar-toggler:active {
+        background-color: unset;
+        color: #9044FF;
+    }
+
+    .navbar-toggler:hover {
+        background-color: unset;
+        color: #9044FF;
+    }
+
+@media (max-width: 767px) {
+    .navbar-collapse {
+        margin-top: 1rem;
+    }
+}
