@@ -47,6 +47,27 @@
 		(EventCallback.Factory.Create(this, new Action(async () => NavManager.NavigateTo("https://drive.google.com/drive/folders/1ThBpgYP9079YVqg1ub2IAsMIxnNMxWQj?usp=sharing"))), "Download ZIP")
 	];
 
+	Dictionary<string, string> MappedCategoryNames => new()
+	{
+		{ "blurry", "Blurry" },
+		{ "boxes", "Boxes" },
+		{ "chervil", "Chervil" },
+		{ "colorful", "Colorful" },
+		{ "dark", "Dark" },
+		{ "exciting", "Exciting" },
+		{ "flowers", "Flowers" },
+		{ "hexagon", "Hexagon" },
+		{ "liga-laperm", "Liga & LaPerm" },
+		{ "lines", "Lines" },
+		{ "love", "Love" },
+		{ "patterns", "Patterns" },
+		{ "pink-purple", "Pink & Purple" },
+		{ "rings", "Rings" },
+		{ "standard", "Standard" },
+		{ "triangles", "Triangles" },
+		{ "waves", "Waves" },
+	};
+
 	(string, string[])[] GetFinalizedList()
 	{
 		List<(string, string[])> finalizedList = [];
@@ -64,7 +85,7 @@
 			if (lastCategory != category)
 			{
 				// Category doesn't match, so we need to add the paths to the finalized list before adding
-				finalizedList.Add((lastCategory, [.. paths]));
+				finalizedList.Add((MappedCategoryNames[lastCategory], [.. paths]));
 				paths.Clear();
 				lastCategory = category;
 			}
@@ -72,7 +93,7 @@
 			// Add the path
 			paths.Add(path);
 		}
-		finalizedList.Add((lastCategory, [.. paths]));
+		finalizedList.Add((MappedCategoryNames[lastCategory], [.. paths]));
 
 		// Return the finalized list
 		return [.. finalizedList];
