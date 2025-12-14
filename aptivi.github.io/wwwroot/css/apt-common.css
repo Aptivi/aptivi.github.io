@@ -1,0 +1,34 @@
+﻿.translucency-rule-black {
+    backdrop-filter: var(--apt-styling-blur-strength);
+    -webkit-backdrop-filter: var(--apt-styling-blur-strength);
+    background-color: var(--apt-accent-back-transparent) !important;
+}
+
+.translucency-rule {
+    backdrop-filter: var(--apt-styling-blur-strength);
+    -webkit-backdrop-filter: var(--apt-styling-blur-strength);
+    background-color: var(--apt-accent-shade-4-shadow) !important;
+}
+
+.bordered {
+    border: solid;
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
+    border-radius: var(--apt-styling-border-radius);
+}
+
+.sub {
+    font-style: oblique;
+    font-size: smaller;
+    color: var(--apt-accent-sub);
+}
+
+.tooltip-apt {
+    font-family: var(--apt-font-style-sans), 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    --bs-tooltip-bg: var(--apt-accent-shade-5);
+    --bs-tooltip-color: var(--apt-accent-2);
+    --bs-tooltip-max-width: 700px;
+    --bs-tooltip-border-radius: 0.5em;
+    --bs-tooltip-arrow-width: 0px;
+    --bs-tooltip-arrow-height: 0px;
+}
