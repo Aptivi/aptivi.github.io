@@ -97,9 +97,11 @@
 	</div>
 
 	<script>
-		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-		console.log("Initialized " + tooltipList.length + " tooltips (was " + tooltipTriggerList.length + " items)")
+		(function() {
+			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+			console.log("Initialized " + tooltipList.length + " tooltips (was " + tooltipTriggerList.length + " items)")
+		})();
 	</script>
 }
 
