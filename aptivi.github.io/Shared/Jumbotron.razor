@@ -15,7 +15,16 @@
 		@if (Branded)
 		{
 			<div class="text-center text-md-end order-1 order-md-2">
-				<img class="img-fluid m-5" src="@BrandImage" style="max-width: 60%;" />
+				@if (!string.IsNullOrEmpty(FontAwesomeIconClasses))
+				{
+					<p class="m-5 d-inline-flex align-items-center justify-content-center accent1" style="width: 250px; height: 250px; max-width: 90vw; max-height: 90vw; font-size: clamp(4rem, 8vw, 10rem);">
+						<i class="@FontAwesomeIconClasses"/>
+					</p>
+				}
+				else
+				{
+					<img class="img-fluid m-5" src="@BrandImage" style="max-width: 60%;" />
+				}
 			</div>
 		}
 	</div>
@@ -36,6 +45,8 @@
 	public bool Branded { get; set; }
 	[Parameter]
 	public string BrandImage { get; set; } = "assets/logos/aptivi-logo-transparent-ios.png";
+	[Parameter]
+	public string FontAwesomeIconClasses { get; set; } = "";
 	[Parameter]
 	public RenderFragment ChildContent { get; set; }
 }
