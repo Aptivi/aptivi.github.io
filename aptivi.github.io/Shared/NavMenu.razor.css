@@ -7,7 +7,7 @@
 }
 
     .nav-item ::deep a {
-        color: white;
+        color: var(--apt-accent-2);
         border-radius: 4px;
         height: 3rem;
         display: flex;
@@ -17,17 +17,17 @@
 
         .nav-item ::deep a.active {
             background-color: unset;
-            color: #9044FF;
+            color: var(--apt-accent-shade-5);
         }
 
         .nav-item ::deep a:hover {
             background-color: unset;
-            color: #9044FF;
+            color: var(--apt-accent-shade-5);
         }
 
 .navbar-toggler {
     background-color: transparent;
-    color: white;
+    color: var(--apt-accent-2);
     padding: 0.5rem 0.75rem;
     font-size: 1.25rem;
     border-radius: .75rem;
@@ -35,12 +35,12 @@
 
     .navbar-toggler:active {
         background-color: unset;
-        color: #9044FF;
+        color: var(--apt-accent-shade-5);
     }
 
     .navbar-toggler:hover {
         background-color: unset;
-        color: #9044FF;
+        color: var(--apt-accent-shade-5);
     }
 
 @media (min-width: 768px) {

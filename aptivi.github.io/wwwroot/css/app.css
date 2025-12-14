@@ -1,79 +1,106 @@
 @import url('font-awesome/css/all.css');
 
+:root {
+    --apt-accent-back: #000000;
+    --apt-accent-back-transparent: #000000D0;
+    --apt-accent-1: #6700FF;
+    --apt-accent-2: #FFFFFF;
+    --apt-accent-shade-1: #3E0099;
+    --apt-accent-shade-2: #220055;
+    --apt-accent-shade-3: #150033;
+    --apt-accent-shade-4: #070011;
+    --apt-accent-shade-5: #9044FF;
+    --apt-accent-sub: gray;
+    --apt-accent-1-shadow: #6700FF80;
+    --apt-accent-shade-4-shadow: #070011D0;
+    --apt-font-style-head: 'Space Mono', "Cairo", monospace;
+    --apt-font-style-sans: 'Inter', "Cairo", sans-serif;
+    --apt-font-style-mono: 'JetBrains Mono', "Cairo", monospace;
+    --apt-styling-border-radius: .75rem;
+    --apt-styling-border-width: 2px;
+    --apt-styling-border-width-thin: 1px;
+    --apt-styling-blur-strength: blur(8px);
+    --apt-styling-unified-box-shadow: var(--apt-accent-1-shadow) 0 0 0 0.10rem;
+    --apt-arrow-left-svg-url: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%239044ff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --apt-arrow-right-svg-url: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%239044ff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    --apt-arrow-up-svg-url: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%236700FF' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+    --apt-arrow-down-svg-url: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%236700FF' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+}
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 10px;
-    background-color: black;
+    background-color: var(--apt-accent-back);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #6700FF;
+    background-color: var(--apt-accent-1);
     border-radius: 10px;
 }
 
     ::-webkit-scrollbar-thumb:hover {
-        background-color: #3E0099;
+        background-color: var(--apt-accent-shade-1);
     }
 
     ::-webkit-scrollbar-thumb:active {
-        background-color: #3E0099;
+        background-color: var(--apt-accent-shade-1);
     }
 
 html, body {
-    font-family: Inter, "Cairo";
-    color: white;
-    background-color: black !important;
+    font-family: var(--apt-font-style-sans);
+    color: var(--apt-accent-2);
+    background-color: var(--apt-accent-back) !important;
 }
 
 .wikilink1, .urlextern, .breadcrumb, .accent1 {
-    color: #6700FF;
+    color: var(--apt-accent-1);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Mono', "Cairo";
+    font-family: var(--apt-font-style-head);
     font-weight: 400;
-    color: #6700FF;
+    color: var(--apt-accent-1);
 }
 
 code, pre {
-    font-family: 'JetBrains Mono', "Cairo";
-    color: #6700FF;
-    background-color: black !important;
+    font-family: var(--apt-font-style-mono);
+    color: var(--apt-accent-1);
+    background-color: var(--apt-accent-back) !important;
 }
 
 .bordered {
     border: solid;
-    border-color: #6700FF;
-    border-width: 2px;
-    border-radius: .75rem;
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
+    border-radius: var(--apt-styling-border-radius);
 }
 
 input, select {
-    color: white;
-    background-color: #150033;
-    border-color: #6700FF;
-    border-width: 2px;
-    border-radius: .75rem;
+    color: var(--apt-accent-2);
+    background-color: var(--apt-accent-shade-3);
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
+    border-radius: var(--apt-styling-border-radius);
 }
 
 pre {
-    background-color: #150033;
-    border-color: #6700FF;
-    border-width: 2px;
-    border-radius: .75rem;
+    background-color: var(--apt-accent-shade-3);
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
+    border-radius: var(--apt-styling-border-radius);
 }
 
 .panel, .breadcrumb, .navbar-default, .navbar-fixed-top, .navbar-toggle, .navbar-default .navbar-toggle:hover {
-    color: white;
-    background-color: #150033;
-    border-color: #6700FF;
-    border-width: 2px;
-    border-radius: .75rem;
+    color: var(--apt-accent-2);
+    background-color: var(--apt-accent-shade-3);
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
+    border-radius: var(--apt-styling-border-radius);
 }
 
     .navbar-default .navbar-brand {
-        color: #150033 !important;
-        font-family: 'Space Mono', "Cairo";
+        color: var(--apt-accent-shade-3) !important;
+        font-family: var(--apt-font-style-head);
     }
 
 .navbar-fixed-top {
@@ -81,109 +108,109 @@ pre {
 }
 
 .panel-default > .panel-heading {
-    color: white;
-    background-color: #150033;
-    border-radius: .75rem;
+    color: var(--apt-accent-2);
+    background-color: var(--apt-accent-shade-3);
+    border-radius: var(--apt-styling-border-radius);
 }
 
 .panel-default > .panel-heading, .navbar-default .navbar-collapse, .navbar-default {
-    color: white;
-    background-color: #150033;
+    color: var(--apt-accent-2);
+    background-color: var(--apt-accent-shade-3);
 }
 
 .page-header, .divider, hr, .breadcrumb {
-    border-color: #6700FF;
-    border-top-color: #6700FF;
-    border-top-width: 2px;
+    border-color: var(--apt-accent-1);
+    border-top-color: var(--apt-accent-1);
+    border-top-width: var(--apt-styling-border-width);
 }
 
 .page-header {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--apt-styling-border-width);
 }
 
 .dropdown-menu .divider {
-    background-color: #8F54AB;
-    height: 2px;
+    background-color: var(--apt-accent-1);
+    height: var(--apt-styling-border-width);
 }
 
 table, thead, tr, td, th, .table > thead > tr > th {
     border: solid;
-    border-color: #6700FF;
-    border-width: 2px;
-    border-radius: 1em !important;
-    background-color: #150033 !important;
-    color: white !important;
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
+    border-radius: var(--apt-styling-border-radius) !important;
+    background-color: var(--apt-accent-shade-3) !important;
+    color: var(--apt-accent-2) !important;
 }
 
 a, .btn-link {
-    color: #6700FF;
+    color: var(--apt-accent-1);
 }
 
 .dropdown-item {
-    color: white;
+    color: var(--apt-accent-2);
 }
 
     .dropdown-item:hover, .dropdown-item:active {
-        color: #9044FF;
-        background-color: #3E0099;
+        color: var(--apt-accent-shade-5);
+        background-color: var(--apt-accent-shade-1);
     }
 
     .dropdown-item:focus {
-        color: #9044FF;
-        background-color: #220055;
+        color: var(--apt-accent-shade-5);
+        background-color: var(--apt-accent-shade-2);
     }
 
 .dropdown-header {
-    color: #9044FF;
+    color: var(--apt-accent-shade-5);
 }
 
 .dropdown-divider {
-    border-top-color: #6700FF;
-    border-width: 2px;
+    border-top-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
 }
 
 .btn-primary, .btn, .form-control {
-    color: white;
-    background-color: #150033;
-    border-color: #6700FF;
-    border-width: 2px;
+    color: var(--apt-accent-2);
+    background-color: var(--apt-accent-shade-3);
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
 }
 
     .btn-primary:hover, .btn:hover, .btn-primary:active, .btn:active, .btn.show {
-        color: white !important;
-        background-color: #3E0099 !important;
-        border-color: #6700FF !important;
-        border-width: 2px;
+        color: var(--apt-accent-2) !important;
+        background-color: var(--apt-accent-shade-1) !important;
+        border-color: var(--apt-accent-1) !important;
+        border-width: var(--apt-styling-border-width);
     }
 
     .btn-primary:focus, .btn:focus {
-        color: white;
-        background-color: #3E0099;
-        border-color: #6700FF;
-        border-width: 2px;
-        box-shadow: #6700FF80 0 0 0 0.10rem;
+        color: var(--apt-accent-2);
+        background-color: var(--apt-accent-shade-1);
+        border-color: var(--apt-accent-1);
+        border-width: var(--apt-styling-border-width);
+        box-shadow: var(--apt-styling-unified-box-shadow);
     }
 
 .btn-secondary {
-    color: white;
-    background-color: black;
-    border-color: #6700FF;
-    border-width: 2px;
+    color: var(--apt-accent-2);
+    background-color: var(--apt-accent-back);
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
 }
 
     .btn-secondary:hover, .btn-secondary:active {
-        color: white !important;
-        background-color: #150033 !important;
-        border-color: #6700FF !important;
-        border-width: 2px;
+        color: var(--apt-accent-2) !important;
+        background-color: var(--apt-accent-shade-3) !important;
+        border-color: var(--apt-accent-1) !important;
+        border-width: var(--apt-styling-border-width);
     }
 
     .btn-secondary:focus {
-        color: white;
-        background-color: #150033;
-        border-color: #6700FF;
-        border-width: 2px;
-        box-shadow: #6700FF80 0 0 0 0.10rem;
+        color: var(--apt-accent-2);
+        background-color: var(--apt-accent-shade-3);
+        border-color: var(--apt-accent-1);
+        border-width: var(--apt-styling-border-width);
+        box-shadow: var(--apt-styling-unified-box-shadow);
     }
 
 .content {
@@ -192,10 +219,10 @@ a, .btn-link {
 }
 
 #blazor-error-ui {
-    color: white;
-    background-color: #40005b;
+    color: var(--apt-accent-2);
+    background-color: var(--apt-accent-shade-4);
     bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--apt-styling-unified-box-shadow);
     display: none;
     left: 0;
     position: fixed;
@@ -205,63 +232,63 @@ a, .btn-link {
 
 .card-title {
     font-size: xx-large;
-    color: #6700FF;
+    color: var(--apt-accent-1);
 }
 
 .icon-square {
     width: 5rem;
     height: 5rem;
-    border-radius: .75rem;
-    background-color: #150033 !important;
-    color: #6700FF !important;
+    border-radius: var(--apt-styling-border-radius);
+    background-color: var(--apt-accent-shade-3) !important;
+    color: var(--apt-accent-1) !important;
 }
 
 .icon-square-invert {
     width: 5rem;
     height: 5rem;
-    border-radius: .75rem;
-    background-color: #150033 !important;
-    color: #6700FF !important;
+    border-radius: var(--apt-styling-border-radius);
+    background-color: var(--apt-accent-shade-3) !important;
+    color: var(--apt-accent-1) !important;
 }
 
 .icon-square-projects {
     width: 9rem;
     height: 9rem;
-    border-radius: .75rem;
-    border-color: #6700FF;
+    border-radius: var(--apt-styling-border-radius);
+    border-color: var(--apt-accent-1);
     border-width: 0.1rem;
     border: solid;
     margin: 0.15rem;
-    background-color: black !important;
-    color: #6700FF !important;
+    background-color: var(--apt-accent-back) !important;
+    color: var(--apt-accent-1) !important;
     align-items: center;
     display: flex;
     justify-content: center;
 }
 
 .card {
-    border-color: #6700FF;
-    border-width: 2px;
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
     border-radius: 1em;
-    background-color: #070011 !important;
-    color: white !important;
+    background-color: var(--apt-accent-shade-4) !important;
+    color: var(--apt-accent-2) !important;
 }
 
 .jumbotron {
     border: solid;
-    border-color: #6700FF;
-    border-width: 2px;
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
     border-radius: 1em !important;
-    background-color: #070011 !important;
-    color: white !important;
+    background-color: var(--apt-accent-shade-4) !important;
+    color: var(--apt-accent-2) !important;
 }
 
 .modal-header {
-    border-bottom-color: #9044FF;
+    border-bottom-color: var(--apt-accent-shade-5);
 }
 
 .modal-footer {
-    border-top-color: #9044FF;
+    border-top-color: var(--apt-accent-shade-5);
 }
 
 .col-lg-4 {
@@ -288,29 +315,29 @@ a, .btn-link {
     }
 
 .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%239044ff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: var(--apt-arrow-left-svg-url);
 }
 
 .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%239044ff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    background-image: var(--apt-arrow-right-svg-url);
 }
 
 .translucency-rule-black {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    background-color: #000000d0 !important;
+    backdrop-filter:  var(--apt-styling-blur-strength);
+    -webkit-backdrop-filter:  var(--apt-styling-blur-strength);
+    background-color: var(--apt-accent-back-transparent) !important;
 }
 
 .translucency-rule, .navbar-fixed-top, .navbar-default, .dropdown-menu, .navbar-nav > li > .dropdown-menu, ul.dropdown-menu {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    background-color: #070011d0 !important;
+    backdrop-filter:  var(--apt-styling-blur-strength);
+    -webkit-backdrop-filter:  var(--apt-styling-blur-strength);
+    background-color: var(--apt-accent-shade-4-shadow) !important;
 }
 
     ul.dropdown-menu.tools, ul.dropdown-menu, .dropdown-menu, .navbar-nav > li > .dropdown-menu {
-        border-color: #6700FF;
-        border-width: 2px;
-        border-radius: .75rem;
+        border-color: var(--apt-accent-1);
+        border-width: var(--apt-styling-border-width);
+        border-radius: var(--apt-styling-border-radius);
     }
 
     .navbar-default .navbar-collapse, .navbar-brand, .navbar-header {
@@ -318,11 +345,11 @@ a, .btn-link {
     }
 
     .navbar-default .navbar-nav > li > a {
-        color: #6700FF;
+        color: var(--apt-accent-1);
     }
 
         .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
-            color: #6700FF;
+            color: var(--apt-accent-1);
             background-color: transparent;
         }
 
@@ -335,24 +362,24 @@ a, .btn-link {
 .nav > li > a:focus, .nav > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
     text-decoration: none;
     background-color: unset;
-    color: #9044FF;
+    color: var(--apt-accent-shade-5);
 }
 
 .nav > li > a:hover, .dropdown-menu > li > a:hover, .navbar-nav > .open > a:hover {
     background-color: unset;
-    color: #9044FF;
+    color: var(--apt-accent-shade-5);
 }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
-    color: white;
+    color: var(--apt-accent-2);
     text-decoration: none;
-    background-color: #150033;
+    background-color: var(--apt-accent-shade-3);
     outline: 0;
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
-    color: white;
-    background-color: #6700FF;
+    color: var(--apt-accent-2);
+    background-color: var(--apt-accent-1);
 }
 
 input#qsearch.form-control, div.input-group-btn {
@@ -360,19 +387,19 @@ input#qsearch.form-control, div.input-group-btn {
 }
 
 #dw__toc .nav > li > a:hover {
-    border-left: 1px solid #6700FF;
+    border-left: var(--apt-styling-border-width-thin) solid var(--apt-accent-1);
 }
 
 #dw__toc .nav > .active > a, #dw__toc .nav > .active > a:hover, #dw__toc .nav > .active > a:focus {
     font-weight: bold;
     background-color: transparent;
-    border-left: 2px solid #6700FF;
+    border-left: var(--apt-styling-border-width) solid var(--apt-accent-1);
 }
 
 .tooltip-apt {
-    font-family: Inter, "Cairo", sans-serif, 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
-    --bs-tooltip-bg: #9044FF;
-    --bs-tooltip-color: white;
+    font-family: var(--apt-font-style-sans), 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    --bs-tooltip-bg: var(--apt-accent-shade-5);
+    --bs-tooltip-color: var(--apt-accent-2);
     --bs-tooltip-max-width: 700px;
     --bs-tooltip-border-radius: 0.5em;
     --bs-tooltip-arrow-width: 0px;
@@ -382,7 +409,7 @@ input#qsearch.form-control, div.input-group-btn {
 .sub {
     font-style: oblique;
     font-size: smaller;
-    color: gray;
+    color: var(--apt-accent-sub);
 }
 
 .loading-progress {
@@ -396,14 +423,14 @@ input#qsearch.form-control, div.input-group-btn {
 
     .loading-progress circle {
         fill: none;
-        stroke: #150033;
+        stroke: var(--apt-accent-shade-3);
         stroke-width: 0.3rem;
         transform-origin: 50% 50%;
         transform: rotate(-90deg);
     }
 
         .loading-progress circle:last-child {
-            stroke: #9044FF;
+            stroke: var(--apt-accent-shade-5);
             stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
             transition: stroke-dasharray 0.05s ease-in-out;
         }
@@ -424,31 +451,31 @@ input#qsearch.form-control, div.input-group-btn {
 }
 
 .accordion-item:not(:first-of-type) {
-    border-top-width: 2px;
+    border-top-width: var(--apt-styling-border-width);
     border-top-style: solid;
-    border-top-color: #6700FF;
+    border-top-color: var(--apt-accent-1);
     margin-top: 10px;
 }
 
 .accordion {
-    --bs-accordion-btn-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%236700FF' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
-    --bs-accordion-btn-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%236700FF' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+    --bs-accordion-btn-icon: var(--apt-arrow-down-svg-url);
+    --bs-accordion-btn-active-icon: var(--apt-arrow-up-svg-url);
 }
 
 .accordion-button {
-    color: #6700FF;
-    background-color: #150033;
-    border-color: #6700FF;
-    border-width: 2px;
+    color: var(--apt-accent-1);
+    background-color: var(--apt-accent-shade-3);
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
     border-radius: inherit !important;
     box-shadow: none;
 }
 
     .accordion-button:not(.collapsed) {
-        color: #6700FF;
-        background-color: #150033;
-        border-color: #6700FF;
-        border-width: 2px;
+        color: var(--apt-accent-1);
+        background-color: var(--apt-accent-shade-3);
+        border-color: var(--apt-accent-1);
+        border-width: var(--apt-styling-border-width);
         border-radius: inherit !important;
         box-shadow: none;
     }
@@ -459,7 +486,7 @@ input#qsearch.form-control, div.input-group-btn {
     }
 
 .label-primary {
-    background-color: #6700FF;
+    background-color: var(--apt-accent-1);
 }
 
 .d-sm-flex {
