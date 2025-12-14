@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\assets\projects\" />
+    <Folder Include="wwwroot\assets\projects\tapet-pack\" />
   </ItemGroup>
 
 </Project>
