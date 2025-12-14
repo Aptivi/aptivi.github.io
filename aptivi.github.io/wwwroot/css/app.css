@@ -209,16 +209,16 @@ a, .btn-link {
 }
 
 .icon-square {
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: .75rem;
     background-color: #150033 !important;
     color: #6700FF !important;
 }
 
 .icon-square-invert {
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: .75rem;
     background-color: #150033 !important;
     color: #6700FF !important;
