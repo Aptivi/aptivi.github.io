@@ -69,14 +69,10 @@
 }
 
 .icon-square-projects {
-    width: 9rem;
-    height: 9rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: var(--apt-styling-border-radius);
-    border-color: var(--apt-accent-1);
-    border-width: 0.1rem;
-    border: solid;
-    margin: 0.15rem;
-    background-color: var(--apt-accent-back) !important;
+    background-color: var(--apt-accent-shade-3) !important;
     color: var(--apt-accent-1) !important;
     align-items: center;
     display: flex;
