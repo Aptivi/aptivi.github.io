@@ -23,7 +23,6 @@
                 "PackageLabel": "KS - mod API v3.0.25.x"
             }
         ],
-        "ProjectImageName": "NitrocidKS",
         "ProjectHasLanding": true,
         "ProjectSupportPolicy": [
             {
@@ -190,7 +189,7 @@
         "ProjectSlug": "NetLimDisable",
         "ProjectGLSlug": "powertools/windows/NetLimDisable",
         "ProjectGBSlug": "aptivi/useful-tools/fix-windows-random-disconnections",
-        "ProjectImageName": "WinPowerTools",
+        "ProjectImageName": "PowerTools",
         "ProjectOrg": "WPT"
     },
     {
