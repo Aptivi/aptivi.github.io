@@ -1,7 +1,7 @@
 [
     {
-        "ProjectName": "Nitrocid KS",
-        "Description": "Nitrocid KS simulates our future-planned kernel, Nitrocid Kernel! It is made entirely in .NET with multiplatform support.",
+        "ProjectName": "Nitrocid",
+        "Description": "Nitrocid simulates our future-planned kernel, Nitrocid Kernel! It is made entirely in .NET with multiplatform support.",
         "ProjectSlug": "Nitrocid",
         "ProjectGLSlug": "main/Nitrocid",
         "ProjectGBSlug": "nitrocid-ks-manual",
