@@ -24,6 +24,7 @@ main {
 .content {
     padding-right: 8rem !important;
     padding-left: 8rem !important;
+    padding-bottom: 4rem !important;
 }
 
 .container-fluid {
