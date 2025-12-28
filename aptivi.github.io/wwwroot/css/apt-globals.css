@@ -2,8 +2,6 @@
     /* 
         Accent colors
     */
-    --apt-accent-back: #000000;
-    --apt-accent-back-transparent: #000000D0;
     --apt-accent-1: #6700FF;
     --apt-accent-2: #FFFFFF;
     --apt-accent-shade-1: #3E0099;
@@ -14,6 +12,13 @@
     --apt-accent-sub: gray;
     --apt-accent-1-shadow: #6700FF80;
     --apt-accent-shade-4-shadow: #070011D0;
+    /*
+        Background colors
+    */
+    --apt-accent-back: #000000;
+    --apt-accent-back-transparent: #000000D0;
+    --apt-accent-back-alternative: #070011;
+    --apt-accent-back-gradient: linear-gradient(135deg,rgba(0, 0, 0, 1) 0%, rgba(21, 0, 51, 1) 100%);
     /* 
         Font style
     */

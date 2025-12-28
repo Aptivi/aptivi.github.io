@@ -32,3 +32,15 @@
     --bs-tooltip-arrow-width: 0px;
     --bs-tooltip-arrow-height: 0px;
 }
+
+.background-primary {
+    background: var(--apt-accent-back);
+}
+
+.background-alternative {
+    background: var(--apt-accent-back-alternative);
+}
+
+.background-gradient {
+    background: var(--apt-accent-back-gradient);
+}
