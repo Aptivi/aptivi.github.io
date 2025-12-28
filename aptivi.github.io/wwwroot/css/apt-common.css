@@ -24,7 +24,7 @@
 }
 
 .tooltip-apt {
-    font-family: var(--apt-font-style-sans), 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    font-family: var(--apt-font-style-sans);
     --bs-tooltip-bg: var(--apt-accent-shade-5);
     --bs-tooltip-color: var(--apt-accent-2);
     --bs-tooltip-max-width: 700px;
