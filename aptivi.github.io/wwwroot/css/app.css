@@ -19,6 +19,10 @@ html, body {
     background-color: var(--apt-accent-back) !important;
 }
 
+button {
+    font-family: var(--apt-font-style-sans);
+}
+
 p {
     font-size: var(--apt-styling-common-font-size);
 }
