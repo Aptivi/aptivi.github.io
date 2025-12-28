@@ -110,6 +110,11 @@
                 "PolicySeries": "7.0.x",
                 "PolicySupportStart": "08/10/2025",
                 "PolicySupportEnd": "08/05/2026"
+            },
+            {
+                "PolicySeries": "8.0.x",
+                "PolicySupportStart": "10/13/2025",
+                "PolicySupportEnd": "10/13/2030"
             }
         ]
     },
