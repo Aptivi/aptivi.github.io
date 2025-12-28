@@ -1,7 +1,7 @@
 [
     {
         "ProjectName": "Nitrocid",
-        "Description": "Nitrocid simulates our future-planned kernel, Nitrocid Kernel! It is made entirely in .NET with multiplatform support.",
+        "Description": "Nitrocid simulates our future-planned kernel, Nitrocid Kernel! It is made entirely in .NET with multiplatform support, while also simulating the textual operating system within the simulator.",
         "ProjectSlug": "Nitrocid",
         "ProjectGLSlug": "main/Nitrocid",
         "ProjectGBSlug": "nitrocid-ks-manual",
@@ -60,7 +60,7 @@
     },
     {
         "ProjectName": "VisualCard",
-        "Description": "This library aims to parse all kinds of contact files, including the VCard 4 files. It can be used in contact and phone applications.",
+        "Description": "This library aims to parse all kinds of contact files, including the vCard 4 and the vCard 5 files. It can also be used to parse vCalendar files, with support for both vCalendar 1.0 and 2.0 calendars.",
         "ProjectSlug": "VisualCard",
         "ProjectGLSlug": "main/VisualCard",
         "ProjectGBSlug": "visualcard-manual",
@@ -120,7 +120,7 @@
     },
     {
         "ProjectName": "BassBoom",
-        "Description": "A cross-platform music app and library",
+        "Description": "A cross-platform music app and library that allows you to play MP3 files and MPEG internet radio stations. It provides you with a Basolia API to give your applications capabilities to play MP3 files and streams.",
         "ProjectSlug": "BassBoom",
         "ProjectGLSlug": "main/BassBoom",
         "ProjectGBSlug": "bassboom-manual",
@@ -142,7 +142,7 @@
     },
     {
         "ProjectName": "SpecProbe",
-        "Description": "A super-fast library that gets hardware information directly from your system",
+        "Description": "A super-fast library that gets hardware information directly from your system, with support for platform-specific native library loading, software information obtaining, and much more.",
         "ProjectSlug": "SpecProbe",
         "ProjectGLSlug": "main/SpecProbe",
         "ProjectGBSlug": "specprobe-manual",
@@ -163,7 +163,7 @@
     },
     {
         "ProjectName": "Textify",
-        "Description": "A text manipulation library for C# and Visual Basic",
+        "Description": "A text manipulation library for C# and Visual Basic that provides all kinds of text extensions, including splitting, replacing, text wrapping, and other powerful text extensions.",
         "ProjectSlug": "Textify",
         "ProjectGLSlug": "main/Textify",
         "ProjectGBSlug": "textify-manual",
@@ -178,7 +178,7 @@
     },
     {
         "ProjectName": "Nettify",
-        "Description": "Internet accessory tools for C# and Visual Basic",
+        "Description": "Internet accessory tools for C# and Visual Basic that provides network tools, including parsing the RSS feed to obtain local news, processing the mail address to get ISP info, and more.",
         "ProjectSlug": "Nettify",
         "ProjectGLSlug": "main/Nettify",
         "ProjectGBSlug": "nettify-manual",
@@ -190,7 +190,7 @@
     },
     {
         "ProjectName": "NetLimDisable",
-        "Description": "Disables the WLAN AutoConfig bad state tracking for Windows 10 or later",
+        "Description": "Disables the WLAN AutoConfig bad state tracking for Windows 10 or later. This fixes intermittent internet disconnections during huge downloads in some cases, especially in poor internet coverage areas.",
         "ProjectSlug": "NetLimDisable",
         "ProjectGLSlug": "powertools/windows/NetLimDisable",
         "ProjectGBSlug": "aptivi/useful-tools/fix-windows-random-disconnections",
@@ -199,7 +199,7 @@
     },
     {
         "ProjectName": "Magico",
-        "Description": "A C# library that allows you to do various magic tricks, such as IEnumerable and file magic numbers",
+        "Description": "A C# library that allows you to do various magic tricks, such as IEnumerable extension functions that simplify their enumeration. It also provides libmagic, which is used to determine the file type accurately based on contents.",
         "ProjectSlug": "Magico",
         "ProjectGLSlug": "main/Magico",
         "ProjectGBSlug": "magico-manual",
@@ -214,7 +214,7 @@
     },
     {
         "ProjectName": "ChemiStar",
-        "Description": "Managed periodic table of elements querying for C# applications",
+        "Description": "Managed periodic table of elements querying for C# applications that make use of such information. It is commonly used in science and biology applications, as well as periodic table image generators.",
         "ProjectSlug": "ChemiStar",
         "ProjectGLSlug": "main/ChemiStar",
         "ProjectGBSlug": "chemistar-manual",
@@ -226,7 +226,7 @@
     },
     {
         "ProjectName": "Metalinker",
-        "Description": "Metalink 3.0 and 4.0 parser for C# applications that download big files",
+        "Description": "Metalink 3.0 and 4.0 parser for C# applications that download big files. This library is typically used to get information about a file from its respective Metalink syntax for download managers.",
         "ProjectSlug": "Metalinker",
         "ProjectGLSlug": "main/Metalinker",
         "ProjectGBSlug": "metalinker-manual",
@@ -238,14 +238,14 @@
     },
     {
         "ProjectName": "BskyId",
-        "Description": "A very small shell script that allows you to get your BlueSky ID from your handle",
+        "Description": "A very small shell script that allows you to get your Bluesky ID from your handle. This is a useful script that is available in both Windows and Unix to make it simple.",
         "ProjectSlug": "BskyId",
         "ProjectGLSlug": "main/BskyId",
         "ProjectGBSlug": "bskyid-manual"
     },
     {
         "ProjectName": "Aptivestigate",
-        "Description": "Crash handler and logging library for C#",
+        "Description": "Crash handler and logging library for C# applications. This provides the built-in loggers, as well as the custom logger support, as well as a general crash handler that prints detailed crash info.",
         "ProjectSlug": "Aptivestigate",
         "ProjectGLSlug": "main/Aptivestigate",
         "ProjectGBSlug": "aptivestigate-manual",
@@ -272,7 +272,7 @@
     },
     {
         "ProjectName": "ResourceLab",
-        "Description": "A C# library that manages the resources from different assemblies",
+        "Description": "A C# library that manages the resources from different assemblies. It is useful in .NET applications that need to access the resources from assemblies, for example, complex programs with addon support.",
         "ProjectSlug": "ResourceLab",
         "ProjectGLSlug": "main/ResourceLab",
         "ProjectGBSlug": "resourcelab-manual",
