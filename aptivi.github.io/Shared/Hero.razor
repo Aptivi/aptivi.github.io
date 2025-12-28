@@ -9,7 +9,7 @@
 				int idx = 0;
 				@foreach (var button in Buttons)
 				{
-					string buttonClass = idx == 0 ? "btn btn-primary btn-lg px-4 gap-3" : "btn btn-secondary btn-lg px-4";
+					string buttonClass = idx == 0 ? "btn btn-primary px-4 gap-3" : "btn btn-secondary px-4";
 					<button class="@buttonClass" type="button" @onclick="@button.Item1">@button.Item2</button>
 					idx++;
 				}
