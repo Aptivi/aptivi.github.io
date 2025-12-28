@@ -23,6 +23,7 @@
     /*
         Styling properties
     */
+    --apt-styling-common-font-size: 1.25rem;
     --apt-styling-border-radius: .75rem;
     --apt-styling-border-width: 2px;
     --apt-styling-border-width-thin: 1px;

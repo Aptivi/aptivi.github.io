@@ -19,6 +19,10 @@ html, body {
     background-color: var(--apt-accent-back) !important;
 }
 
+p {
+    font-size: var(--apt-styling-common-font-size);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--apt-font-style-head);
     font-weight: 400;
