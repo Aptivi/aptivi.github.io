@@ -25,10 +25,14 @@
 
 .tooltip-apt {
     font-family: var(--apt-font-style-sans);
-    --bs-tooltip-bg: var(--apt-accent-shade-5);
+    border: solid;
+    border-color: var(--apt-accent-1);
+    border-width: var(--apt-styling-border-width);
+    border-radius: var(--apt-styling-border-radius);
+    --bs-tooltip-bg: var(--apt-accent-shade-3);
     --bs-tooltip-color: var(--apt-accent-2);
     --bs-tooltip-max-width: 700px;
-    --bs-tooltip-border-radius: 0.5em;
+    --bs-tooltip-border-radius: var(--apt-styling-border-radius);
     --bs-tooltip-arrow-width: 0px;
     --bs-tooltip-arrow-height: 0px;
 }
