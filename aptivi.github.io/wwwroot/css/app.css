@@ -35,7 +35,6 @@ h1, h2, h3, h4, h5, h6 {
 code, pre {
     font-family: var(--apt-font-style-mono);
     color: var(--apt-accent-1);
-    background-color: var(--apt-accent-back) !important;
 }
 
 input, select {
@@ -46,11 +45,15 @@ input, select {
     border-radius: var(--apt-styling-border-radius);
 }
 
+code {
+    background-color: unset;
+}
+
 pre {
-    background-color: var(--apt-accent-shade-3);
+    background-color: var(--apt-accent-shade-3) !important;
     border-color: var(--apt-accent-1);
-    border-width: var(--apt-styling-border-width);
-    border-radius: var(--apt-styling-border-radius);
+    border-width: var(--apt-styling-border-width) !important;
+    border-radius: var(--apt-styling-border-radius) !important;
 }
 
 a {
