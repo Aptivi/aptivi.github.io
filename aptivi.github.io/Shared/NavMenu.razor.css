@@ -48,7 +48,7 @@
     background-color: var(--apt-accent-1);
 }
 
-.panel, .breadcrumb, .navbar-default, .navbar-fixed-top, .navbar-toggle, .navbar-default .navbar-toggle:hover {
+.panel, .navbar-default, .navbar-fixed-top, .navbar-toggle, .navbar-default .navbar-toggle:hover {
     color: var(--apt-accent-2);
     background-color: var(--apt-accent-shade-3);
     border-color: var(--apt-accent-1);

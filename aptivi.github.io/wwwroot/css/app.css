@@ -8,7 +8,6 @@
 @import url('apt-important.css');
 
 /* Aptivi-specific overrides and declarations */
-@import url('aptint.css');
 @import url('apt-common.css');
 @import url('apt-overrides.css');
 
