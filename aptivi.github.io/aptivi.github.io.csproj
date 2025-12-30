@@ -21,8 +21,4 @@
     <EmbeddedResource Include="Resources/*.json" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\assets\projects\tapet-pack\" />
-  </ItemGroup>
-
 </Project>
