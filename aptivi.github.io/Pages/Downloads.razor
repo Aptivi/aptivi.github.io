@@ -9,6 +9,7 @@
 @using aptivi.github.io.Data
 @using System.IO
 @using System.Text.Json
+@inject NavigationManager NavManager
 
 <Hero Title="Downloads">
 	Here lists all our downloads that are published to the public at the moment. These downloads are found either
@@ -37,7 +38,7 @@
 			IconClass = "fa fa-file-download",
 			Title = "Collection of Distorted Wallpapers",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "distorted-wallpapers", "_blank"))), "Download")
+				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("distorted-wallpapers"))), "Download")
 			],
 			Description =
 				"This is a collection of distorted wallpapers made by one of the xscreensaver screensavers against " +
@@ -48,7 +49,7 @@
 			IconClass = "fa fa-file-download",
 			Title = "Tapet Collection",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "tapet-collection", "_blank"))), "Download"),
+				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("tapet-collection"))), "Download"),
 			],
 			Description =
 				"This is a collection of wallpapers made by Tapet, categorized according to the generated wallpapers " +
