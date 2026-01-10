@@ -1,5 +1,5 @@
 ﻿@page "/Nitrocid"
-@inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime;
 @using aptivi.github.io.Data
 
 <PageTitle>Nitrocid KS - Aptivi</PageTitle>
@@ -95,8 +95,8 @@
 
 	(EventCallback, string)[] DownloadCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://github.com/Aptivi/Nitrocid/releases"))), "Download now"),
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://github.com/Aptivi/Nitrocid"))), "Source code"),
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://aptivi.gitbook.io/aptivi/nitrocid-ks-manual"))), "Documentation")
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Nitrocid/releases", "_blank"))), "Download now"),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Nitrocid", "_blank"))), "Source code"),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io/aptivi/nitrocid-ks-manual", "_blank"))), "Documentation")
 	];
 }

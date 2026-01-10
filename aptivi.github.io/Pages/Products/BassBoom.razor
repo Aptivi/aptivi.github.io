@@ -1,5 +1,5 @@
 ﻿@page "/BassBoom"
-@inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime;
 @using aptivi.github.io.Data
 
 <PageTitle>BassBoom - Aptivi</PageTitle>
@@ -93,8 +93,8 @@
 
 	(EventCallback, string)[] DownloadCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://github.com/Aptivi/BassBoom/releases"))), "Download now"),
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://github.com/Aptivi/BassBoom"))), "Source code"),
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://aptivi.gitbook.io/aptivi/bassboom-manual"))), "Documentation")
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/BassBoom/releases", "_blank"))), "Download now"),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/BassBoom", "_blank"))), "Source code"),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io/aptivi/bassboom-manual", "_blank"))), "Documentation")
 	];
 }

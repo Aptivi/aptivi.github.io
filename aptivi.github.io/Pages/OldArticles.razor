@@ -1,4 +1,5 @@
 ﻿@page "/old-articles"
+@inject IJSRuntime JSRuntime;
 
 <PageTitle>Old Articles - Aptivi</PageTitle>
 
@@ -8,7 +9,6 @@
 @using aptivi.github.io.Data
 @using System.IO
 @using System.Text.Json
-@inject NavigationManager NavManager
 
 <Hero Title="Old Articles">
 	Here lists all our old articles that have been archived and that we think that it's worth
@@ -36,7 +36,7 @@
 					foreach (var attachment in article.ArticleAttachments)
 					{
 						string fileName = attachment.Substring(attachment.LastIndexOf('/') + 1);
-						var callback = EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo(attachment)));
+						var callback = EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", attachment, "_blank")));
 						attachmentButtons.Add((callback, fileName));
 					}
 				}
@@ -45,7 +45,7 @@
 					IconClass = "fa fa-newspaper",
 					Title = article.ArticleDate,
 					Buttons = [
-						(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo(article.ArticleLink))), "Read"),
+						(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", article.ArticleLink, "_blank"))), "Read"),
 						.. attachmentButtons
 					],
 					Description = article.ArticleTitle

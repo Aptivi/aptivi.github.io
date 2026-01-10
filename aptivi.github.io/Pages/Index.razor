@@ -1,6 +1,6 @@
 ﻿@page "/"
 @using aptivi.github.io.Data
-@inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime;
 
 <PageTitle>Index</PageTitle>
 <Hero Title="Welcome to Aptivi!">
@@ -64,8 +64,8 @@
 
 	(EventCallback, string)[] DiscoverCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("projects"))), "Projects"),
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("downloads"))), "Downloads"),
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://aptivi.gitbook.io"))), "GitBook")
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "projects", "_blank"))), "Projects"),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "downloads", "_blank"))), "Downloads"),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io", "_blank"))), "GitBook")
 	];
 }

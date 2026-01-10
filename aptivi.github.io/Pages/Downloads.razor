@@ -1,4 +1,5 @@
 ﻿@page "/downloads"
+@inject IJSRuntime JSRuntime;
 
 <PageTitle>Downloads - Aptivi</PageTitle>
 
@@ -8,7 +9,6 @@
 @using aptivi.github.io.Data
 @using System.IO
 @using System.Text.Json
-@inject NavigationManager NavManager
 
 <Hero Title="Downloads">
 	Here lists all our downloads that are published to the public at the moment. These downloads are found either
@@ -26,7 +26,7 @@
 			IconClass = "fa fa-file-download",
 			Title = "Official Aptivi Branding",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://officialaptivi.wordpress.com/branding/"))), "Download")
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://officialaptivi.wordpress.com/branding/", "_blank"))), "Download")
 			],
 			Description =
 				"This file contains all official Aptivi assets (wallpapers for different screen sizes and logo in " +
@@ -37,7 +37,7 @@
 			IconClass = "fa fa-file-download",
 			Title = "Collection of Distorted Wallpapers",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("distorted-wallpapers"))), "Download")
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "distorted-wallpapers", "_blank"))), "Download")
 			],
 			Description =
 				"This is a collection of distorted wallpapers made by one of the xscreensaver screensavers against " +
@@ -48,7 +48,7 @@
 			IconClass = "fa fa-file-download",
 			Title = "Tapet Collection",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("tapet-collection"))), "Download"),
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "tapet-collection", "_blank"))), "Download"),
 			],
 			Description =
 				"This is a collection of wallpapers made by Tapet, categorized according to the generated wallpapers " +
@@ -59,9 +59,9 @@
 			IconClass = "fa fa-file-download",
 			Title = "Windows 11 Assets",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://drive.google.com/file/d/1RnRXoCSyUlWfg-ZrexT6qo9IiNGwhcaa/view?usp=sharing"))), "Wallpapers"),
-				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://drive.google.com/file/d/1Tpkv9CULF8uXnGS1PmQAPyxN1J5czjT1/view?usp=sharing"))), "Sounds"),
-				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://drive.google.com/file/d/1cjPq7IAkvsi_p-ypx5wK4v9h5i9MdOhw/view?usp=sharing"))), "Fonts"),
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://drive.google.com/file/d/1RnRXoCSyUlWfg-ZrexT6qo9IiNGwhcaa/view?usp=sharing", "_blank"))), "Wallpapers"),
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://drive.google.com/file/d/1Tpkv9CULF8uXnGS1PmQAPyxN1J5czjT1/view?usp=sharing", "_blank"))), "Sounds"),
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://drive.google.com/file/d/1cjPq7IAkvsi_p-ypx5wK4v9h5i9MdOhw/view?usp=sharing", "_blank"))), "Fonts"),
 			],
 			Description =
 				"This is a collection of Windows 11 official wallpapers, sounds, and fonts that are originated from the " +
@@ -72,8 +72,8 @@
 			IconClass = "fa fa-file-download",
 			Title = "Collection of PPT OS",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://drive.google.com/file/d/17X57jrlzQsZpITlu1w7qF-4-W8LvpE3b/view?usp=sharing"))), "Download (1/2)"),
-				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://drive.google.com/file/d/1bLZvpDC0NF4fe-RAeJqJ76Zb34ai7b07/view?usp=sharing"))), "Download (2/2)"),
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://drive.google.com/file/d/17X57jrlzQsZpITlu1w7qF-4-W8LvpE3b/view?usp=sharing", "_blank"))), "Download (1/2)"),
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://drive.google.com/file/d/1bLZvpDC0NF4fe-RAeJqJ76Zb34ai7b07/view?usp=sharing", "_blank"))), "Download (2/2)"),
 			],
 			Description =
 				"This is a collection of PowerPoint operating systems that simulate the real operations of the entire " +
@@ -84,7 +84,7 @@
 			IconClass = "fa fa-file-download",
 			Title = "NFS: MW (2005) - Debug Document",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("https://officialaptivi.files.wordpress.com/2020/03/nfs-2005-debug-revision-1.docx"))), "Download")
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://officialaptivi.files.wordpress.com/2020/03/nfs-2005-debug-revision-1.docx", "_blank"))), "Download")
 			],
 			Description =
 				"This debug document gives you a detailed explanation about how Blackbox and EA tested Need for Speed: " +

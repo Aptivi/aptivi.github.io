@@ -48,19 +48,14 @@
 		(function() {
 			const container = document.currentScript.closest('.carousel-container');
 			if (!container) return;
-			console.log('getid');
 			const carouselElement = container.querySelector('.carousel.slide');
 			if (!carouselElement) return;
-			console.log('container');
 			const carouselId = carouselElement.getAttribute('data-carousel-id');
 			if (!carouselId) return;
-			console.log('update');
 			function updateCaption() {
-				console.log('Caption updated ', carouselId);
 				const active = carouselElement.querySelector('.carousel-item.active');
 				if (!active) return;
 				const captionIdx = active.getAttribute('data-caption-index');
-				console.log('Caption updated idx ', captionIdx);
 				container.querySelectorAll('.caption-content').forEach(caption => {
 					caption.classList.remove('active');
 				});

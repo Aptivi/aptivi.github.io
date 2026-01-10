@@ -8,7 +8,7 @@
 @using aptivi.github.io.Data
 @using System.IO
 @using System.Text.Json
-@inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime;
 
 <Hero Title="Our projects">
 	Here lists all our projects that are published to the public at our GitHub. Also, it shows relevant links to their
@@ -48,17 +48,17 @@
 									@foreach (var nugetPackage in project.NuGetPackages)
 									{
 										string label = !string.IsNullOrEmpty(nugetPackage.PackageLabel) ? nugetPackage.PackageLabel : nugetPackage.PackageName;
-										<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://nuget.org/packages/{nugetPackage.PackageName}"))"><span class="fa fa-cubes" aria-hidden="true" /> @label</a></li>
+										<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://nuget.org/packages/{nugetPackage.PackageName}", "_blank"))"><span class="fa fa-cubes" aria-hidden="true" /> @label</a></li>
 									}
 									<li><hr class="dropdown-divider"></li>
 								}
 								<li><h6 class="dropdown-header user-select-none">Source code</h6></li>
-								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://github.com/{org}/{project.ProjectSlug}"))"><span class="fab fa-github" aria-hidden="true" /> GitHub</a></li>
-								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://gitlab.com/aptivi/{project.ProjectGLSlug}"))"><span class="fab fa-gitlab" aria-hidden="true" /> GitLab (mirror)</a></li>
+								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://github.com/{org}/{project.ProjectSlug}", "_blank"))"><span class="fab fa-github" aria-hidden="true" /> GitHub</a></li>
+								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://gitlab.com/aptivi/{project.ProjectGLSlug}", "_blank"))"><span class="fab fa-gitlab" aria-hidden="true" /> GitLab (mirror)</a></li>
 								<li><hr class="dropdown-divider"></li>
 								<li><h6 class="dropdown-header user-select-none">Documentation</h6></li>
-								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://aptivi.gitbook.io/{project.ProjectGBSlug}"))"><span class="fa-solid fa-book" aria-hidden="true" /> GitBook manual</a></li>
-								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(e => NavManager.NavigateTo($"https://aptivi.github.io/{project.ProjectSlug}"))"><span class="fa-solid fa-code" aria-hidden="true" /> API reference</a></li>
+								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://aptivi.gitbook.io/{project.ProjectGBSlug}", "_blank"))"><span class="fa-solid fa-book" aria-hidden="true" /> GitBook manual</a></li>
+								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://aptivi.github.io/{project.ProjectSlug}", "_blank"))"><span class="fa-solid fa-code" aria-hidden="true" /> API reference</a></li>
 							</ul>
 						</div>
 						@if (project.ProjectSupportPolicy is not null && project.ProjectSupportPolicy.Length > 0)

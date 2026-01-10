@@ -1,4 +1,5 @@
 ﻿@page "/distorted-wallpapers"
+@inject IJSRuntime JSRuntime;
 
 <PageTitle>Collection of Distorted Wallpapers - Aptivi</PageTitle>
 
@@ -8,7 +9,6 @@
 @using aptivi.github.io.Data
 @using System.IO
 @using System.Text.Json
-@inject NavigationManager NavManager
 
 <Hero Title="Collection of Distorted Wallpapers" Buttons="@LinkCallbacks">
 	This is a collection of distorted wallpapers made by one of the xscreensaver screensavers against
@@ -22,7 +22,7 @@
 {
 	(EventCallback, string)[] LinkCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(async () => NavManager.NavigateTo("https://drive.google.com/file/d/15gOb0GyzyEKhIs5Y09oaoBgBjGhPaC2i/view?usp=drive_link"))), "Download ZIP")
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://drive.google.com/file/d/15gOb0GyzyEKhIs5Y09oaoBgBjGhPaC2i/view?usp=drive_link", "_blank"))), "Download ZIP")
 	];
 
 	string[] PictureDescriptors =>
