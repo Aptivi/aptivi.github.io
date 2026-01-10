@@ -17,78 +17,76 @@
 
 @if (projects is not null)
 {
-	<div class="row g-4 row-cols-1 row-cols-xl-3">
+	<div class="row g-4 row-cols-1 row-cols-xl-2">
 		@foreach (var project in projects)
 		{
 			string org = string.IsNullOrEmpty(project.ProjectOrg) ? "Aptivi" : $"Aptivi-{project.ProjectOrg}";
 			string finalImageName = !string.IsNullOrEmpty(project.ProjectImageName) ? project.ProjectImageName : project.ProjectName;
-			<div class="col d-flex align-items-start">
-				<div class="icon-square-projects d-inline-flex align-items-center justify-content-center fs-1 flex-shrink-0 me-3">
+			<div class="col text-center">
+				<div class="icon-square d-inline-flex align-items-center justify-content-center flex-shrink-0 my-5">
 					<object class="icon-square-projects-image" data="assets/applogos/OfficialAppIcon-@finalImageName-512.png" type="image/jpeg"><img class="icon-square-projects-image" src="assets/logos/aptivi-logo-transparent-ios.png" /></object>
 				</div>
-				<div>
-					<h3 class="fs-2">@project.ProjectName</h3>
-					<p>@project.Description</p>
-					@if (org != "Aptivi")
+				<h3 class="fs-2">@project.ProjectName</h3>
+				<p>@project.Description</p>
+				@if (org != "Aptivi")
+				{
+					string orgName = orgs[org];
+					<p class="card-text sub"><small>by @orgName</small></p>
+				}
+				<div class="di-grid gap-2 d-sm-flex justify-content-center">
+					@if (project.ProjectHasLanding)
 					{
-						string orgName = orgs[org];
-						<p class="card-text sub"><small>by @orgName</small></p>
+						<a href="@finalImageName" class="btn btn-primary">Learn more...</a>
 					}
-					<div class="di-grid gap-2 d-sm-flex">
-						@if (project.ProjectHasLanding)
-						{
-							<a href="@finalImageName" class="btn btn-primary">Learn more...</a>
-						}
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Download...</button>
-							<ul class="dropdown-menu jumbotron translucency-rule">
-								@if (project.NuGetPackages is not null)
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Download...</button>
+						<ul class="dropdown-menu jumbotron translucency-rule">
+							@if (project.NuGetPackages is not null)
+							{
+								<li><h6 class="dropdown-header user-select-none">NuGet packages</h6></li>
+								@foreach (var nugetPackage in project.NuGetPackages)
 								{
-									<li><h6 class="dropdown-header user-select-none">NuGet packages</h6></li>
-									@foreach (var nugetPackage in project.NuGetPackages)
-									{
-										string label = !string.IsNullOrEmpty(nugetPackage.PackageLabel) ? nugetPackage.PackageLabel : nugetPackage.PackageName;
-										<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://nuget.org/packages/{nugetPackage.PackageName}", "_blank"))"><span class="fa fa-cubes" aria-hidden="true" /> @label</a></li>
-									}
-									<li><hr class="dropdown-divider"></li>
+									string label = !string.IsNullOrEmpty(nugetPackage.PackageLabel) ? nugetPackage.PackageLabel : nugetPackage.PackageName;
+									<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://nuget.org/packages/{nugetPackage.PackageName}", "_blank"))"><span class="fa fa-cubes" aria-hidden="true" /> @label</a></li>
 								}
-								<li><h6 class="dropdown-header user-select-none">Source code</h6></li>
-								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://github.com/{org}/{project.ProjectSlug}", "_blank"))"><span class="fab fa-github" aria-hidden="true" /> GitHub</a></li>
-								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://gitlab.com/aptivi/{project.ProjectGLSlug}", "_blank"))"><span class="fab fa-gitlab" aria-hidden="true" /> GitLab (mirror)</a></li>
 								<li><hr class="dropdown-divider"></li>
-								<li><h6 class="dropdown-header user-select-none">Documentation</h6></li>
-								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://aptivi.gitbook.io/{project.ProjectGBSlug}", "_blank"))"><span class="fa-solid fa-book" aria-hidden="true" /> GitBook manual</a></li>
-								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://aptivi.github.io/{project.ProjectSlug}", "_blank"))"><span class="fa-solid fa-code" aria-hidden="true" /> API reference</a></li>
+							}
+							<li><h6 class="dropdown-header user-select-none">Source code</h6></li>
+							<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://github.com/{org}/{project.ProjectSlug}", "_blank"))"><span class="fab fa-github" aria-hidden="true" /> GitHub</a></li>
+							<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://gitlab.com/aptivi/{project.ProjectGLSlug}", "_blank"))"><span class="fab fa-gitlab" aria-hidden="true" /> GitLab (mirror)</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><h6 class="dropdown-header user-select-none">Documentation</h6></li>
+							<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://aptivi.gitbook.io/{project.ProjectGBSlug}", "_blank"))"><span class="fa-solid fa-book" aria-hidden="true" /> GitBook manual</a></li>
+							<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://aptivi.github.io/{project.ProjectSlug}", "_blank"))"><span class="fa-solid fa-code" aria-hidden="true" /> API reference</a></li>
+						</ul>
+					</div>
+					@if (project.ProjectSupportPolicy is not null && project.ProjectSupportPolicy.Length > 0)
+					{
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Support policy...</button>
+							<ul class="dropdown-menu jumbotron translucency-rule">
+								<li><h6 class="dropdown-header user-select-none">Version series</h6></li>
+								@foreach (var policy in project.ProjectSupportPolicy)
+								{
+									string icon = "fa-question";
+									bool hasEnd = !string.IsNullOrWhiteSpace(policy.PolicySupportEnd);
+									string supportStatus = "Undetermined";
+									DateTimeOffset dateStart = DateTimeHelpers.GetDateTimeFrom(policy.PolicySupportStart);
+									string tooltipTitle = $"<b>{dateStart.ToString("D")}</b>";
+									@if (hasEnd)
+									{
+										icon = policy.PolicyUnderMaintenance ? "fa-gears" : "fa-check";
+										DateTimeOffset dateEnd = DateTimeHelpers.GetDateTimeFrom(policy.PolicySupportEnd);
+										bool expired = DateTimeOffset.Now >= dateEnd;
+										bool almostExpired = DateTimeOffset.Now >= dateEnd.AddMonths(-1);
+										supportStatus = expired ? "Out of support" : almostExpired ? "Almost out of support" : "Under support";
+										tooltipTitle = $"<b>{dateStart.ToString("D")}</b> -> <b>{dateEnd.ToString("D")}</b>";
+									}
+									<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-bs-custom-class="tooltip-apt" data-bs-title="@tooltipTitle<br></br>Support status: <b>@supportStatus</b>"><span class="fa-solid @icon" aria-hidden="true" /> @policy.PolicySeries</a></li>
+								}
 							</ul>
 						</div>
-						@if (project.ProjectSupportPolicy is not null && project.ProjectSupportPolicy.Length > 0)
-						{
-							<div class="dropdown">
-								<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Support policy...</button>
-								<ul class="dropdown-menu jumbotron translucency-rule">
-									<li><h6 class="dropdown-header user-select-none">Version series</h6></li>
-									@foreach (var policy in project.ProjectSupportPolicy)
-									{
-										string icon = "fa-question";
-										bool hasEnd = !string.IsNullOrWhiteSpace(policy.PolicySupportEnd);
-										string supportStatus = "Undetermined";
-										DateTimeOffset dateStart = DateTimeHelpers.GetDateTimeFrom(policy.PolicySupportStart);
-										string tooltipTitle = $"<b>{dateStart.ToString("D")}</b>";
-										@if (hasEnd)
-										{
-											icon = policy.PolicyUnderMaintenance ? "fa-gears" : "fa-check";
-											DateTimeOffset dateEnd = DateTimeHelpers.GetDateTimeFrom(policy.PolicySupportEnd);
-											bool expired = DateTimeOffset.Now >= dateEnd;
-											bool almostExpired = DateTimeOffset.Now >= dateEnd.AddMonths(-1);
-											supportStatus = expired ? "Out of support" : almostExpired ? "Almost out of support" : "Under support";
-											tooltipTitle = $"<b>{dateStart.ToString("D")}</b> -> <b>{dateEnd.ToString("D")}</b>";
-										}
-										<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-bs-custom-class="tooltip-apt" data-bs-title="@tooltipTitle<br></br>Support status: <b>@supportStatus</b>"><span class="fa-solid @icon" aria-hidden="true" /> @policy.PolicySeries</a></li>
-									}
-								</ul>
-							</div>
-						}
-					</div>
+					}
 				</div>
 			</div>
 		}

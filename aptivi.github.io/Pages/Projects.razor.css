@@ -68,18 +68,7 @@
     border-width: var(--apt-styling-border-width);
 }
 
-.icon-square-projects {
-    width: 5rem;
-    height: 5rem;
-    border-radius: var(--apt-styling-border-radius);
-    background-color: var(--apt-accent-shade-3) !important;
-    color: var(--apt-accent-1) !important;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
 .icon-square-projects-image {
-    width: 4rem;
-    height: 4rem;
+    width: 256px;
+    height: 256px;
 }
