@@ -20,6 +20,10 @@
     border-width: var(--apt-styling-border-width);
 }
 
+.bordered-radius {
+    border-radius: var(--apt-styling-border-radius);
+}
+
 .sub {
     font-style: oblique;
     font-size: smaller;

@@ -12,7 +12,7 @@
 					EventCallback previewLink = PreviewLinks[pictureNum];
 					pictureNum++;
 					<div class="col d-flex align-items-start">
-						<img class="img-fluid bordered" src="@picture" @onclick="previewLink" />
+						<img class="img-fluid bordered bordered-radius" src="@picture" @onclick="previewLink" />
 					</div>
 				}
 			}
@@ -21,7 +21,7 @@
 				@foreach (var picture in Pictures)
 				{
 					<div class="col d-flex align-items-start">
-						<img class="img-fluid bordered" src="@picture" />
+						<img class="img-fluid bordered bordered-radius" src="@picture" />
 					</div>
 				}
 			}
