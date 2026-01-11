@@ -284,10 +284,22 @@
     },
     {
         "ProjectName": "Colorimetry",
-        "Description": "[Coming soon] A rich C# library that allows you to manage colors, transform them, and convert them to different color models. Originally taken from Terminaux, you can now access this powerful color management library anywhere!",
+        "Description": "A rich C# library that allows you to manage colors, transform them, and convert them to different color models. Originally taken from Terminaux, you can now access this powerful color management library anywhere!",
         "ProjectSlug": "Colorimetry",
         "ProjectGLSlug": "main/Colorimetry",
         "ProjectGBSlug": "colorimetry-manual",
+        "NuGetPackages": [
+            {
+                "PackageName": "Colorimetry"
+            }
+        ]
+    },
+    {
+        "ProjectName": "Calendrier",
+        "Description": "[Coming soon] A C# library that provides a set of built-in calendar abstractions with custom calendar support",
+        "ProjectSlug": "Calendrier",
+        "ProjectGLSlug": "main/Calendrier",
+        "ProjectGBSlug": "calendrier-manual",
         "NuGetPackages": [
         ]
     }
