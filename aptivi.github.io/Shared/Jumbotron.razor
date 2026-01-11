@@ -1,6 +1,6 @@
 ﻿<BrandedBorder ExtraStyles="@ExtraStyles">
-	<div class="d-flex flex-column flex-md-row justify-content-between">
-		<div class="container-fluid order-2 order-md-1">
+	<div class="d-flex flex-column flex-lg-row justify-content-between">
+		<div class="container-fluid order-2 order-lg-1">
 			<h1 class="fs-1">@Title</h1>
 			<p>@ChildContent</p>
 			@if (Buttons is not null)
@@ -14,7 +14,7 @@
 		</div>
 		@if (Branded)
 		{
-			<div class="text-center text-md-end order-1 order-md-2">
+			<div class="text-center text-lg-end order-1 order-lg-2">
 				@if (!string.IsNullOrEmpty(FontAwesomeIconClasses))
 				{
 					<p class="m-5 d-inline-flex align-items-center justify-content-center" style="color: var(--apt-accent-1); width: 250px; height: 250px; max-width: 90vw; max-height: 90vw; font-size: clamp(4rem, 8vw, 10rem);">
