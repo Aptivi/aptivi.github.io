@@ -11,6 +11,10 @@
 @import url('apt-common.css');
 @import url('apt-overrides.css');
 
+:root {
+    color-scheme: light dark;
+}
+
 body {
     overflow-x: hidden;
 }
