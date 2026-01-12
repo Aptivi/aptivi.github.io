@@ -296,11 +296,14 @@
     },
     {
         "ProjectName": "Calendrier",
-        "Description": "[Coming soon] A C# library that provides a set of built-in calendar abstractions. Originally taken from Terminaux, you can now access various calendar types without having to specify cultures anywhere!",
+        "Description": "A C# library that provides a set of built-in calendar abstractions. Originally taken from Terminaux, you can now access various calendar types without having to specify cultures anywhere!",
         "ProjectSlug": "Calendrier",
         "ProjectGLSlug": "main/Calendrier",
         "ProjectGBSlug": "calendrier-manual",
         "NuGetPackages": [
+            {
+                "PackageName": "Calendrier"
+            }
         ]
     }
 ]
