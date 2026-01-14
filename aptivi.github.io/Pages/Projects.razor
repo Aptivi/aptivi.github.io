@@ -17,20 +17,20 @@
 
 @if (projects is not null)
 {
-	<div class="container-fluid px-3 px-md-4">
+	<div class="container-fluid">
 		<div class="row g-3 g-md-4 row-cols-1 row-cols-xl-2">
 			@foreach (var project in projects)
 			{
 				string org = string.IsNullOrEmpty(project.ProjectOrg) ? "Aptivi" : $"Aptivi-{project.ProjectOrg}";
 				string finalImageName = !string.IsNullOrEmpty(project.ProjectImageName) ? project.ProjectImageName : project.ProjectName;
-				<div class="col text-center p-5">
+				<div class="col text-center p-2 p-md-5">
 					<div class="icon-square d-inline-flex align-items-center justify-content-center flex-shrink-0 my-3 my-md-5">
 						<object class="icon-square-projects-image" data="assets/applogos/OfficialAppIcon-@finalImageName-512.png" type="image/jpeg">
 							<img class="icon-square-projects-image" src="assets/logos/aptivi-logo-transparent-ios.png" />
 						</object>
 					</div>
 					<h3 class="fs-1">@project.ProjectName</h3>
-					<p class="py-2 px-2 px-md-0">@project.Description</p>
+					<p class="py-0 px-0 px-md-2 py-md-2">@project.Description</p>
 					@if (org != "Aptivi")
 					{
 						string orgName = orgs[org];
