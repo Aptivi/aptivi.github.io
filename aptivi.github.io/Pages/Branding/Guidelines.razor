@@ -1,4 +1,5 @@
 ﻿@page "/branding/guidelines"
+@inject NavigationManager NavManager
 @inject IJSRuntime JSRuntime;
 
 <PageTitle>Brand Guidelines - Aptivi</PageTitle>
@@ -114,14 +115,18 @@
 	</div>
 </Jumbotron>
 <Features FeatureArray="@OtherRules" />
-<Hero Title="Report any violations" Buttons="@ReportCallbacks">
+<Hero Title="Report any violations" Buttons="@(Agreed ? ReportCallbacksAgreed : ReportCallbacks)" ForceSecondaryButtons="@(!Agreed)">
 	In case you came across a design that you suspect might violate our
 	guidelines, or you have a presentation or a design that you need to
 	propose to us, please contact us.
+	<br />
+	<br />
+	<label><InputCheckbox class="form-check-input" @bind-Value="Agreed"></InputCheckbox> I agree with the guidelines</label>
 </Hero>
 
 @code
 {
+	public bool Agreed { get; set; } = false;
 	FeatureDescriptor[] LogoAssets =>
 	[
 		new()
@@ -248,5 +253,10 @@
 	(EventCallback, string)[] ReportCallbacks =>
 	[
 		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://officialaptivi.wordpress.com/contact/", "_blank"))), "Contact us")
+	];
+	(EventCallback, string)[] ReportCallbacksAgreed =>
+	[
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Branding/releases/tag/260212", "_blank"))), "Download"),
+		.. ReportCallbacks
 	];
 }

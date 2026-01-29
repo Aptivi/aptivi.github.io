@@ -1,0 +1,24 @@
+﻿@page "/branding/download"
+@inject NavigationManager NavManager
+
+<PageTitle>Download Brand Press Kit - Aptivi</PageTitle>
+
+@using System.Threading;
+@using System.Net;
+@using System.Text;
+@using aptivi.github.io.Data
+@using System.IO
+@using System.Text.Json
+
+<Hero Title="Download Brand Press Kit" Buttons="@RedirectCallbacks">
+	Thanks for your interest in our press kit! You can download our official
+	branding press kit, but you'll need to read the guidelines first.
+</Hero>
+
+@code
+{
+	(EventCallback, string)[] RedirectCallbacks =>
+	[
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("branding/guidelines"))), "Read this first")
+	];
+}
