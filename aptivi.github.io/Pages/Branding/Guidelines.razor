@@ -23,20 +23,9 @@
 	in your design to ensure that they meet our standards, and that your design is reminiscent
 	of ours. Usage of the Aptivi logos and assets is free, but the guidelines need to be
 	followed. Consistency in design is important, hence the below guidelines that will be
-	outlined below.
+	outlined below, as well as recommended programs.
 </Jumbotron>
-<Features FeatureArray="@LogoAssets" />
-<Jumbotron Title="What about other assets?">
-	We are not only providing the brand logos (normal and monochrome, with and without the
-	logotype), the wallpapers (standard VGA resolution, widescreen resolutions, old phone
-	resolutions, and new phone resolutions, with or without logo), presentation templates
-	(PowerPoint template files and .SVG and .AF files for image-based presentations) and
-	source assets (which include both .SVG as an open format for the majority of the programs
-	and .AF for Affinity Studio v3), but we are also providing other assets that may be useful,
-	such as audio branding, which includes a variety of instrumentals, and official fonts, which
-	have been chosen carefully during the first stage of the rebrand.
-</Jumbotron>
-<Features FeatureArray="@FontAssets" />
+<Features FeatureArray="@RecommendedPrograms" />
 <Jumbotron Title="Usage of logo source files" BackgroundType="BackgroundType.Alternative">
 	You are allowed to use the logo source files, but only for viewing and resizing, as long as
 	you respect the aspect ratio of our logos and assets used in your design. When you resize the
@@ -114,6 +103,16 @@
 		<img class="img-fluid bordered bordered-radius" src="assets/misc/guidelines/section07-margin-guidelines.png" />
 	</div>
 </Jumbotron>
+<Jumbotron Title="Picture guidelines" BackgroundType="BackgroundType.Alternative">
+	If you're using a picture that is outside our branding assets in the press kit, and you're using
+	it as an introduction of a slide or a cover, you should recolor the picture to match the primary
+	accent. This ensures that consistency is maintained in your designs when it comes to colors.
+	Recoloring is not required when you're using it somewhere else.
+	<br />
+	<div class="col d-flex align-items-start">
+		<img class="img-fluid bordered bordered-radius" src="assets/misc/guidelines/section08-picture-guidelines.png" />
+	</div>
+</Jumbotron>
 <Features FeatureArray="@OtherRules" />
 <Hero Title="Report any violations" Buttons="@(Agreed ? ReportCallbacksAgreed : ReportCallbacks)" ForceSecondaryButtons="@(!Agreed)">
 	In case you came across a design that you suspect might violate our
@@ -127,102 +126,27 @@
 @code
 {
 	public bool Agreed { get; set; } = false;
-	FeatureDescriptor[] LogoAssets =>
+	FeatureDescriptor[] RecommendedPrograms =>
 	[
 		new()
 		{
-			IconClass = "fa-solid fa-eye",
-			Title = "Brand logos",
+			IconClass = "fa-solid fa-images",
+			Title = "Affinity v3",
 			Description =
-				"The branding kit includes the brand logos of both the normal variant and the monochrome variant. " +
-				"We also provide you with both the logotype variant, which is useful for presentations and other " +
-				"places that a wide logo is preferred, and the logo-only variant, which is useful for square " +
-				"elements that need to show a logo. It also includes app and library icons."
+				"Our branding and its assets were created using Canva's Affinity v3. This program provides a wide " +
+				"array of image, vector, and layout editing tools, all in one application. To embrace the future, " +
+				"we've decided to use this application instead of its substitutes to ensure that our design remains " +
+				"accessible for everyone."
 		},
 		new()
 		{
-			IconClass = "fa-solid fa-image",
-			Title = "Wallpapers",
+			IconClass = "fa-solid fa-person-chalkboard",
+			Title = "PowerPoint",
 			Description =
-				"We are also providing wallpapers for our official branding, which are useful for different screen " +
-				"types, from standard VGA resolution to widescreen and 16:10 screens. Not only that, but we're also " +
-				"providing versions for phones in both the old screen format for old phones and the new screen format " +
-				"for modern phones, and they're compatible with major operating systems."
-		},
-		new()
-		{
-			IconClass = "fa-solid fa-chalkboard",
-			Title = "Presentation Templates",
-			Description =
-				"We are also providing presentation templates for those who are creating presentations for us. Those " +
-				"templates are provided in both the Affinity Studio format for image-based presentations and the " +
-				"PowerPoint template files for slide-based presentations. Image-based presentations are usually used " +
-				"for websites and other places, while slide-based ones are used in both physical and virtual conferences."
-		},
-		new()
-		{
-			IconClass = "fa-solid fa-code",
-			Title = "Source Files",
-			Description =
-				"For those who'd like to see everything behind the scenes and provide scalable versions of our image " +
-				"assets, we're providing source files in both the .SVG files with open standards and the .AF files " +
-				"created specifically for Affinity Studio. This makes sure that our branding gets scaled in the way " +
-				"and the size you desire without experiencing pixelations, while preserving quality and smoothness."
-		},
-	];
-	FeatureDescriptor[] FontAssets =>
-	[
-		new()
-		{
-			IconClass = "fa-solid fa-heading",
-			Title = "Heading font",
-			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/Space+Mono", "_blank"))), "Learn more")
-			],
-			Description =
-				"The heading font has been chosen with Space Mono as the default font, which is an open source font " +
-				"that provides both a modern and a futuristic look and feel, which aligns with our mission of taking " +
-				"a look at the future of technology. The heading describes the start of a section to give users a clear " +
-				"indication that they've moved on to the next section."
-		},
-		new()
-		{
-			IconClass = "fa-solid fa-font",
-			Title = "Body font",
-			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/Inter", "_blank"))), "Learn more")
-			],
-			Description =
-				"The body font has been carefully chosen, and to align with the recent design trends, as well as the " +
-				"bold, modern look, we've chosen Inter as the default body font, which is commonly found in the majority " +
-				"of our assets. This font provides readable characters, with carefully designed contours to ensure that " +
-				"clarity is the first priority when it comes to both printing on papers and displaying on screens."
-		},
-		new()
-		{
-			IconClass = "fa-solid fa-code",
-			Title = "Code font",
-			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/JetBrains+Mono", "_blank"))), "Learn more")
-			],
-			Description =
-				"As technology is all about us, and we write code and programming-related articles and demonstrations, " +
-				"as well as showcases for code and general code tags in websites and designs, we've chosen JetBrains " +
-				"Mono as the default code font. The futuristic look of the font, as well as the unmatched monotype " +
-				"display, ensures that code becomes readable, clear, and easy to comprehend with ligature support."
-		},
-		new()
-		{
-			IconClass = "fa-solid fa-align-right",
-			Title = "RTL font",
-			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/Cairo", "_blank"))), "Learn more")
-			],
-			Description =
-				"To achieve internationalization of our assets, we've chosen a fourth display font that covers the " +
-				"whole design for right-to-left text scripts, such as Arabic. To provide support for such scripts, " +
-				"we have decided to choose a font that aligns with both our standards and general modern standards " +
-				"according to the recent design trends. Cairo is bold, versatile, and attractive."
+				"Our presentation templates rely on PowerPoint to ensure that our presentations meet the standards " +
+				"of our design, while allowing presenters to talk about anything in a clear and concise manner without " +
+				"letting the audience process too much text. Our presentations will make sure that we explain core " +
+				"concepts without the information overload by using visuals."
 		},
 	];
 	FeatureDescriptor[] OtherRules =>
