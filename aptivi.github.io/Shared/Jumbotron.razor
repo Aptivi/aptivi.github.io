@@ -8,7 +8,14 @@
 			{
 				@foreach (var button in Buttons)
 				{
-					<button class="btn btn-primary" type="button" @onclick="@button.Item1">@button.Item2</button>
+					@if (button.disabled)
+					{
+						<button class="btn btn-primary" type="button" disabled>@button.Item2</button>
+					}
+					else
+					{
+						<button class="btn btn-primary" type="button" @onclick="@button.Item1">@button.Item2</button>
+					}
 				}
 			}
 			<a href="@SourceLink" class="sub">@SourceText</a>
@@ -33,7 +40,7 @@
 
 @code {
 	[Parameter]
-	public (EventCallback, string)[] Buttons { get; set; }
+	public (EventCallback, string, bool disabled)[] Buttons { get; set; }
 	[Parameter]
 	public string ExtraStyles { get; set; }
 	[Parameter]

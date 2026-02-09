@@ -182,13 +182,13 @@
 				"and reliability."
 		},
 	];
-	(EventCallback, string)[] ReportCallbacks =>
+	(EventCallback, string, bool)[] ReportCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://officialaptivi.wordpress.com/contact/", "_blank"))), "Contact us")
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://officialaptivi.wordpress.com/contact/", "_blank"))), "Contact us", false)
 	];
-	(EventCallback, string)[] ReportCallbacksAgreed =>
+	(EventCallback, string, bool)[] ReportCallbacksAgreed =>
 	[
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Branding/releases/tag/260212", "_blank"))), "Download"),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Branding/releases/tag/260212", "_blank"))), "Download", true),
 		.. ReportCallbacks
 	];
 }

@@ -30,14 +30,14 @@
 			articles = (OldArticle[])await JsonSerializer.DeserializeAsync(stream, typeof(OldArticle[]));
 			foreach (var article in articles)
 			{
-				var attachmentButtons = new List<(EventCallback, string)>();
+				var attachmentButtons = new List<(EventCallback, string, bool)>();
 				if (article.ArticleAttachments is not null)
 				{
 					foreach (var attachment in article.ArticleAttachments)
 					{
 						string fileName = attachment.Substring(attachment.LastIndexOf('/') + 1);
 						var callback = EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", attachment, "_blank")));
-						attachmentButtons.Add((callback, fileName));
+						attachmentButtons.Add((callback, fileName, false));
 					}
 				}
 				var articleDescriptor = new FeatureDescriptor()
@@ -45,7 +45,7 @@
 					IconClass = "fa fa-newspaper",
 					Title = article.ArticleDate,
 					Buttons = [
-						(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", article.ArticleLink, "_blank"))), "Read"),
+						(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", article.ArticleLink, "_blank"))), "Read", false),
 						.. attachmentButtons
 					],
 					Description = article.ArticleTitle

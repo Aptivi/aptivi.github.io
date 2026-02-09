@@ -93,7 +93,7 @@
 			IconClass = "fa-solid fa-heading",
 			Title = "Heading font",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/Space+Mono", "_blank"))), "Learn more")
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/Space+Mono", "_blank"))), "Learn more", false)
 			],
 			Description =
 				"The heading font has been chosen with Space Mono as the default font, which is an open source font " +
@@ -106,7 +106,7 @@
 			IconClass = "fa-solid fa-font",
 			Title = "Body font",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/Inter", "_blank"))), "Learn more")
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/Inter", "_blank"))), "Learn more", false)
 			],
 			Description =
 				"The body font has been carefully chosen, and to align with the recent design trends, as well as the " +
@@ -119,7 +119,7 @@
 			IconClass = "fa-solid fa-code",
 			Title = "Code font",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/JetBrains+Mono", "_blank"))), "Learn more")
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/JetBrains+Mono", "_blank"))), "Learn more", false)
 			],
 			Description =
 				"As technology is all about us, and we write code and programming-related articles and demonstrations, " +
@@ -132,7 +132,7 @@
 			IconClass = "fa-solid fa-align-right",
 			Title = "RTL font",
 			Buttons = [
-				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/Cairo", "_blank"))), "Learn more")
+				(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://fonts.google.com/specimen/Cairo", "_blank"))), "Learn more", false)
 			],
 			Description =
 				"To achieve internationalization of our assets, we've chosen a fourth display font that covers the " +
@@ -141,8 +141,8 @@
 				"according to the recent design trends. Cairo is bold, versatile, and attractive."
 		},
 	];
-	(EventCallback, string)[] RedirectCallbacks =>
+	(EventCallback, string, bool)[] RedirectCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("branding/guidelines"))), "Read this first")
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("branding/guidelines"))), "Read this first", false)
 	];
 }

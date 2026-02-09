@@ -10,7 +10,14 @@
 				@foreach (var button in Buttons)
 				{
 					string buttonClass = idx == 0 && !ForceSecondaryButtons ? "btn btn-primary px-4 gap-3" : "btn btn-secondary px-4";
-					<button class="@buttonClass" type="button" @onclick="@button.Item1">@button.Item2</button>
+					@if (button.disabled)
+					{
+						<button class="@buttonClass" type="button" disabled>@button.Item2</button>
+					}
+					else
+					{
+						<button class="@buttonClass" type="button" @onclick="@button.Item1">@button.Item2</button>
+					}
 					idx++;
 				}
 			}
@@ -20,7 +27,7 @@
 
 @code {
 	[Parameter]
-	public (EventCallback, string)[] Buttons { get; set; }
+	public (EventCallback, string, bool disabled)[] Buttons { get; set; }
 	[Parameter]
 	public string Title { get; set; }
 	[Parameter]

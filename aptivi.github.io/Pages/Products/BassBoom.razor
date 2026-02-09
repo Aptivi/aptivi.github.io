@@ -99,10 +99,10 @@
 		},
 	];
 
-	(EventCallback, string)[] DownloadCallbacks =>
+	(EventCallback, string, bool)[] DownloadCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/BassBoom/releases", "_blank"))), "Download now"),
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/BassBoom", "_blank"))), "Source code"),
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io/aptivi/bassboom-manual", "_blank"))), "Documentation")
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/BassBoom/releases", "_blank"))), "Download now", false),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/BassBoom", "_blank"))), "Source code", false),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io/aptivi/bassboom-manual", "_blank"))), "Documentation", false)
 	];
 }

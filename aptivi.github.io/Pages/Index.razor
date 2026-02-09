@@ -73,10 +73,10 @@
 		},
 	];
 
-	(EventCallback, string)[] DiscoverCallbacks =>
+	(EventCallback, string, bool)[] DiscoverCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("projects"))), "Projects"),
-		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("downloads"))), "Downloads"),
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io", "_blank"))), "GitBook")
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("projects"))), "Projects", false),
+		(EventCallback.Factory.Create(this, new Action(() => NavManager.NavigateTo("downloads"))), "Downloads", false),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io", "_blank"))), "GitBook", false)
 	];
 }
