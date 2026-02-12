@@ -120,6 +120,8 @@
 	<div class="col d-flex align-items-start">
 		<img class="img-fluid bordered bordered-radius" src="assets/misc/guidelines/section08-picture-guidelines.png" />
 	</div>
+	<br />
+	<a class="sub" href="https://www.freepik.com/free-photo/young-woman-taking-time-out-relax-home-sitting-with-her-bare-feet-up-table-eyes-closed_14528568.htm">Source image</a>
 </Jumbotron>
 <Features FeatureArray="@OtherRules" />
 <Hero Title="Report any violations" Buttons="@(Agreed ? ReportCallbacksAgreed : ReportCallbacks)" ForceSecondaryButtons="@(!Agreed)">
@@ -188,7 +190,7 @@
 	];
 	(EventCallback, string, bool)[] ReportCallbacksAgreed =>
 	[
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Branding/releases/tag/260212", "_blank"))), "Download", true),
+		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Branding/releases/tag/260212", "_blank"))), "Download", false),
 		.. ReportCallbacks
 	];
 }
