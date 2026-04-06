@@ -1,4 +1,5 @@
 ﻿@using aptivi.github.io.Data
+
 <BrandedBorder ExtraStyles="@ExtraStyles" BackgroundType="@BackgroundType">
 	<div class="d-flex flex-column flex-lg-row justify-content-between">
 		<div class="container-fluid order-2 order-lg-1">
@@ -8,13 +9,13 @@
 			{
 				@foreach (var button in Buttons)
 				{
-					@if (button.disabled)
+					@if (button.Disabled)
 					{
-						<button class="btn btn-primary" type="button" disabled>@button.Item2</button>
+						<button class="btn btn-primary" type="button" disabled>@button.Label</button>
 					}
 					else
 					{
-						<button class="btn btn-primary" type="button" @onclick="@button.Item1">@button.Item2</button>
+						<button class="btn btn-primary" type="button" @onclick="@button.Callback">@button.Label</button>
 					}
 				}
 			}
@@ -40,7 +41,7 @@
 
 @code {
 	[Parameter]
-	public (EventCallback, string, bool disabled)[] Buttons { get; set; }
+	public ButtonAction[] Buttons { get; set; }
 	[Parameter]
 	public string ExtraStyles { get; set; }
 	[Parameter]

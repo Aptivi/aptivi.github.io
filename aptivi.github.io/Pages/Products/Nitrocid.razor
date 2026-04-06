@@ -102,10 +102,10 @@
 		},
 	];
 
-	(EventCallback, string, bool)[] DownloadCallbacks =>
+	ButtonAction[] DownloadCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Nitrocid/releases", "_blank"))), "Download now", false),
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Nitrocid", "_blank"))), "Source code", false),
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io/aptivi/nitrocid-ks-manual", "_blank"))), "Documentation", false)
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Nitrocid/releases", "_blank"), "Download now"),
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Nitrocid", "_blank"), "Source code"),
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io/aptivi/nitrocid-ks-manual", "_blank"), "Documentation")
 	];
 }

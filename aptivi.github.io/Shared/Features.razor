@@ -18,13 +18,13 @@
 							{
 								@foreach (var button in @feature.Buttons)
 								{
-									@if (button.disabled)
+									@if (button.Disabled)
 									{
-										<button class="btn btn-primary" type="button" disabled>@button.Item2</button>
+										<button class="btn btn-primary" type="button" disabled>@button.Label</button>
 									}
 									else
 									{
-										<button class="btn btn-primary" type="button" @onclick="@button.Item1">@button.Item2</button>
+										<button class="btn btn-primary" type="button" @onclick="@button.Callback">@button.Label</button>
 									}
 								}
 							}

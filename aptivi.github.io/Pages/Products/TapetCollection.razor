@@ -44,10 +44,10 @@
 {
 	bool ShowCount { get; set; }
 
-	(EventCallback, string, bool)[] LinkCallbacks =>
+	ButtonAction[] LinkCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://drive.google.com/drive/folders/1ThBpgYP9079YVqg1ub2IAsMIxnNMxWQj?usp=sharing", "_blank"))), "Download ZIP", false),
-		(EventCallback.Factory.Create(this, new Action(async () => ShowCount = !ShowCount)), "Show count", false)
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://drive.google.com/drive/folders/1ThBpgYP9079YVqg1ub2IAsMIxnNMxWQj?usp=sharing", "_blank"), "Download ZIP"),
+		new(this, async () => ShowCount = !ShowCount, "Show count")
 	];
 
 	Dictionary<string, string> MappedCategoryNames => new()

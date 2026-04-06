@@ -20,9 +20,9 @@
 
 @code
 {
-	(EventCallback, string, bool)[] LinkCallbacks =>
+	ButtonAction[] LinkCallbacks =>
 	[
-		(EventCallback.Factory.Create(this, new Action(async () => await JSRuntime.InvokeVoidAsync("open", "https://drive.google.com/file/d/15gOb0GyzyEKhIs5Y09oaoBgBjGhPaC2i/view?usp=drive_link", "_blank"))), "Download ZIP", false)
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://drive.google.com/file/d/15gOb0GyzyEKhIs5Y09oaoBgBjGhPaC2i/view?usp=drive_link", "_blank"), "Download ZIP")
 	];
 
 	string[] PictureDescriptors =>
