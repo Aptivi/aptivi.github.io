@@ -305,5 +305,17 @@
                 "PackageName": "Calendrier"
             }
         ]
+    },
+    {
+        "ProjectName": "Threadify",
+        "Description": "A C# library that provides you a way to more efficiently manage threads, start them, and stop them. It also provides you with an ability to restart threads more efficiently and with a single line of code.",
+        "ProjectSlug": "Threadify",
+        "ProjectGLSlug": "main/Threadify",
+        "ProjectGBSlug": "threadify-manual",
+        "NuGetPackages": [
+            {
+                "PackageName": "Threadify"
+            }
+        ]
     }
 ]
