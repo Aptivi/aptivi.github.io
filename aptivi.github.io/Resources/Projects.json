@@ -317,5 +317,14 @@
                 "PackageName": "Threadify"
             }
         ]
+    },
+    {
+        "ProjectName": "Aptivi Dev Toolkit",
+        "ProjectImageName": "ADT",
+        "Description": "A development toolkit that allows you to seamlessly integrate a build system to your project. It is written in Python, and it supports vendor scripts and custom actions for flexibility while maintaining cross-platform support.",
+        "ProjectSlug": "tools",
+        "ProjectGLSlug": "main/tools",
+        "ProjectGBSlug": "aptivi-development-toolkit",
+        "ProjectHasAPI": false
     }
 ]

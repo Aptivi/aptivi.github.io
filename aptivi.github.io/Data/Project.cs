@@ -7,6 +7,7 @@ namespace aptivi.github.io.Data
         public string ProjectSlug { get; set; }
         public string ProjectGLSlug { get; set; }
         public string ProjectGBSlug { get; set; }
+        public bool ProjectHasAPI { get; set; } = true;
         public ProjectNuGetPackages[] NuGetPackages { get; set; }
         public string ProjectImageName { get; set; }
         public string ProjectOrg { get; set; }

@@ -60,7 +60,10 @@
 								<li><hr class="dropdown-divider"></li>
 								<li><h6 class="dropdown-header user-select-none">Documentation</h6></li>
 								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://aptivi.gitbook.io/{project.ProjectGBSlug}", "_blank"))"><span class="fa-solid fa-book" aria-hidden="true" /> GitBook manual</a></li>
-								<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://aptivi.github.io/{project.ProjectSlug}", "_blank"))"><span class="fa-solid fa-code" aria-hidden="true" /> API reference</a></li>
+								@if (project.ProjectHasAPI)
+								{
+									<li><a class="dropdown-item d-flex gap-2 align-items-center user-select-none" @onclick="@(async () => await JSRuntime.InvokeVoidAsync("open", $"https://aptivi.github.io/{project.ProjectSlug}", "_blank"))"><span class="fa-solid fa-code" aria-hidden="true" /> API reference</a></li>
+								}
 							</ul>
 						</div>
 						@if (project.ProjectSupportPolicy is not null && project.ProjectSupportPolicy.Length > 0)
