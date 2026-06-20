@@ -60,7 +60,7 @@ code, pre {
 
 input, select {
     color: var(--apt-accent-2);
-    background-color: var(--apt-accent-shade-3);
+    background-color: var(--apt-accent-back);
     border-color: var(--apt-accent-1);
     border-width: var(--apt-styling-border-width);
     border-radius: var(--apt-styling-border-radius);
@@ -71,7 +71,7 @@ code {
 }
 
 pre {
-    background-color: var(--apt-accent-shade-3) !important;
+    background-color: var(--apt-accent-back) !important;
     border-color: var(--apt-accent-1);
     border-width: var(--apt-styling-border-width) !important;
     border-radius: var(--apt-styling-border-radius) !important;
