@@ -99,9 +99,10 @@
                 "PackageName": "Terminaux.Spectre"
             }
         ],
+        "ProjectHasLanding": true,
         "ProjectSupportPolicy": [
             {
-                "PolicySeries": "v6.1.x",
+                "PolicySeries": "6.1.x",
                 "PolicySupportStart": "12/22/2024",
                 "PolicySupportEnd": "08/05/2026",
                 "PolicyUnderMaintenance": true
@@ -109,7 +110,8 @@
             {
                 "PolicySeries": "7.0.x",
                 "PolicySupportStart": "08/10/2025",
-                "PolicySupportEnd": "08/05/2026"
+                "PolicySupportEnd": "08/05/2026",
+                "PolicyUnderMaintenance": true
             },
             {
                 "PolicySeries": "8.0.x",

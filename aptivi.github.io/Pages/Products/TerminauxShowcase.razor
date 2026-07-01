@@ -1,0 +1,103 @@
+﻿@page "/TerminauxShowcase"
+@inject IJSRuntime JSRuntime;
+@using aptivi.github.io.Data
+
+<PageTitle>Terminaux - Aptivi</PageTitle>
+
+<Hero Title="Terminaux" ImageSource="assets/applogos/OfficialAppIcon-Terminaux-512.png" Buttons="@DownloadCallbacks">
+	Advanced console manipulation library for C# console apps
+</Hero>
+
+<body>
+	<Jumbotron Title="What is Terminaux?" Branded="true" BrandImage="assets/applogos/OfficialAppIcon-Terminaux-512.png">
+		Terminaux is an advanced console manipulation library that makes your C# console applications more
+		powerful and gorgeous. Written in C# with .NET, it is a cross-platform library that introduces you
+		features that make your console applications more interactive while abstracting away the internals
+		so that you can implement interactive console applications more easily. With features like the input
+		reader, the interactive TUI, and the VT sequence generator, you can make powerful console
+		applications that support both the keyboard and the mouse, complete with cyclic writers and screen
+		buffering feature.
+	</Jumbotron>
+	<Features FeatureArray="@AppFeatures" />
+	<Jumbotron Title="Are there extra features?" Branded="true" FontAwesomeIconClasses="fa-regular fa-images">
+		Yes, there are extra features that are implemented in two separate libraries: Terminaux.Images and
+		Terminaux.Spectre. The former allows you to display images to the console using the cross-platform
+		ImageMagick library that comes with this library, while the latter allows you to translate
+		functionality from/to Spectre.Console, as long as they're supported in both Terminaux and
+		Spectre.Console. Terminaux.Images can also render icons provided by a separate
+		Terminaux.Images.Icons library that lets you render an icon from an icon library with more than
+		4,000 icons provided by <a href="https://openmoji.org/">OpenMoji</a>.
+	</Jumbotron>
+	<Hero Title="Get it!" ImageSource="assets/applogos/OfficialAppIcon-Terminaux-512.png" Buttons="@DownloadCallbacks">
+		Try out Terminaux today in your console application by clicking on the buttons below!
+	</Hero>
+</body>
+
+@code
+{
+	FeatureDescriptor[] AppFeatures =>
+	[
+		new()
+		{
+			IconClass = "fa-solid fa-arrow-pointer",
+			Title = "Input system",
+			Description =
+				"The input system in Terminaux ensures that your console applications support interactive " +
+				"input, with both the keyboard and the mouse. It also provides you with info boxes, choice " +
+				"selections, and many more input methods for interactivity."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-display",
+			Title = "Screen buffer",
+			Description =
+				"Terminaux provides you with screen buffering tools so that you can make full-screen console " +
+				"applications without worrying about refreshing the screen manually or on resize. With support " +
+				"for cyclic writers and console resize listener, you can make sure that your app scales when " +
+				"it resizes."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-terminal",
+			Title = "Shell system",
+			Description =
+				"For command-line interface applications, you can implement a minimal shell system with " +
+				"support for commands, arguments, and switches. Just add commands and their information, " +
+				"and Terminaux will handle the rest of heavy lifting, such as processing arguments."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-sliders",
+			Title = "VT sequences",
+			Description =
+				"Terminaux also allows you to build VT sequences while it lets you choose what kind of VT " +
+				"sequence you need to print to the console without having to memorize the sequence itself. " +
+				"Also, it allows you to process text to filter them from VT sequences for cleaner text."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-swatchbook",
+			Title = "Theme system",
+			Description =
+				"You can also assign different colors to different elements using themes. With support for " +
+				"JSON-based theme files and custom theme properties, you can change the default theme colors " +
+				"for your application to give it a different look and feel, with support for true color."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-toolbox",
+			Title = "Console tools",
+			Description =
+				"Terminaux provides you with more console tools that allow you to make your console application " +
+				"feel more responsive, such as the console resize listener, while providing extensions that " +
+				"provide different functionality, such as cursor, formatting, positioning, and much more."
+		},
+	];
+
+	ButtonAction[] DownloadCallbacks =>
+	[
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://nuget.org/packages/Terminaux", "_blank"), "Download now"),
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/Terminaux", "_blank"), "Source code"),
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io/aptivi/terminaux-manual", "_blank"), "Documentation")
+	];
+}
