@@ -327,6 +327,7 @@
         "ProjectSlug": "tools",
         "ProjectGLSlug": "main/tools",
         "ProjectGBSlug": "aptivi-development-toolkit",
+        "ProjectHasLanding": true,
         "ProjectHasAPI": false
     }
 ]

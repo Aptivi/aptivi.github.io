@@ -1,0 +1,72 @@
+﻿@page "/ADTShowcase"
+@inject IJSRuntime JSRuntime;
+@using aptivi.github.io.Data
+
+<PageTitle>Aptivi Development Toolkit - Aptivi</PageTitle>
+
+<Hero Title="Aptivi Development Toolkit" ImageSource="assets/applogos/OfficialAppIcon-ADT-512.png" Buttons="@DownloadCallbacks">
+	Development toolkit that integrates with your projects, written in Python
+</Hero>
+
+<body>
+	<Jumbotron Title="What is ADT?" Branded="true" BrandImage="assets/applogos/OfficialAppIcon-ADT-512.png">
+		Aptivi Development Toolkit (ADT) is an improved development kit that is a remake of the shell-based
+		development scripts in Python for easier maintenance. It's a development toolkit that allows you to
+		seamlessly integrate it to your project, with built-in actions that you can define for your project's
+		build system. Those actions are defined in vendor scripts that allow you to easily define how your
+		project builds, cleans up, tests, and performs other actions as per your choice.
+	</Jumbotron>
+	<Features FeatureArray="@AppFeatures" />
+	<Hero Title="Get it!" ImageSource="assets/applogos/OfficialAppIcon-ADT-512.png" Buttons="@DownloadCallbacks">
+		Install ADT today to your project's source code by clicking on the buttons below!
+	</Hero>
+</body>
+
+@code
+{
+	FeatureDescriptor[] AppFeatures =>
+	[
+		new()
+		{
+			IconClass = "fa-solid fa-computer",
+			Title = "Cross-platform",
+			Description =
+				"ADT provides you with cross-platform support, benefitted by Python being a cross-platform " +
+				"programming language that is popular. By leveraging cross-platform support, ADT runs everywhere " +
+				"Python is supported, including Windows, macOS, Linux, and FreeBSD."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-cubes",
+			Title = "Flexible",
+			Description =
+				"ADT implements flexibility by turning a set of complicated shell scripts that are hard to maintain " +
+				"to a subset of Python files you can maintain once, reducing complexity and increasing " +
+				"maintainability of your build and other scripts."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-code",
+			Title = "Customizable",
+			Description =
+				"ADT not only gives you a subset of actions you can implement via the vendor scripts, but you can " +
+				"also customize your whole build system by adding new actions that you can call via a single ADT " +
+				"command to perform additional actions for your projects."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-code-merge",
+			Title = "Git support",
+			Description =
+				"ADT also provides basic Git support, with some of the most basic operations implemented, like pushing " +
+				"a set of commits, updating your project's source code, or creating a new commit. This requires that " +
+				"your repository uses Git for these features to work."
+		},
+	];
+
+	ButtonAction[] DownloadCallbacks =>
+	[
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/tools", "_blank"), "Source code"),
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io/aptivi/aptivi-development-toolkit", "_blank"), "Documentation")
+	];
+}
