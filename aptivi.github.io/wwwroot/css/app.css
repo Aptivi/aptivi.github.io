@@ -27,7 +27,7 @@ body {
 /* Common HTML overrides */
 html, body {
     font-family: var(--apt-font-style-sans);
-    font-size: 10.75px;
+    font-size: 14px;
     color: var(--apt-accent-2);
     background-color: var(--apt-accent-back) !important;
 }
@@ -51,7 +51,7 @@ button {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--apt-font-style-head);
     font-weight: 400;
-    color: var(--apt-accent-1);
+    color: var(--apt-accent-shade-5);
 }
 
 code, pre {
