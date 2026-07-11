@@ -27,6 +27,7 @@ body {
 /* Common HTML overrides */
 html, body {
     font-family: var(--apt-font-style-sans);
+    font-size: 10.75px;
     color: var(--apt-accent-2);
     background-color: var(--apt-accent-back) !important;
 }
