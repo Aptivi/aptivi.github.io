@@ -1,0 +1,107 @@
+﻿@page "/MediaBoomShowcase"
+@inject IJSRuntime JSRuntime;
+@using aptivi.github.io.Data
+
+<PageTitle>MediaBoom - Aptivi</PageTitle>
+
+<Hero Title="MediaBoom v1.0" ImageSource="assets/applogos/OfficialAppIcon-MediaBoom-512.png" Buttons="@DownloadCallbacks">
+	A cross-platform music player, written in C#. Now available as version 1.0!
+</Hero>
+
+<body>
+	<Jumbotron Title="What is MediaBoom?" Branded="true" BrandImage="assets/applogos/OfficialAppIcon-MediaBoom-512.png">
+		MediaBoom is an application and a library, written in .NET with C# as the programming
+		langauge, that allows you to play music, videos, and online radio stations effortlessly,
+		without having to write low-level code. This uses the embedded MPV library as a backend for
+		playing audio, which is the main goal of MediaBoom. It uses your platform's audio APIs to be
+		able to play your favorite songs and movies. To ensure smooth playback for sound effects and
+		other features, MediaBoom provides the Play-n-Forget technique that allows your applications to
+		play such sounds in certain events, such as when a key is pressed.
+	</Jumbotron>
+	<Features FeatureArray="@AppFeatures" />
+	<Carousel Id="bb-slides" Slides="@Slides" />
+	<br />
+	<br />
+	<Jumbotron Title="Can it play radio stations?" Branded="true" FontAwesomeIconClasses="fa-solid fa-radio">
+		Yes! MediaBoom can not only play regular media files that are found in your hard disk, but
+		it can also play streamable content, which includes radio stations! You can listen to all
+		radio stations, just like how you would do it in a real media player. The only time that we
+		require an active internet connection is when you're trying to play	streams available on the
+		internet. You can also take a look at the online radio station information when it's playing,
+		regardless of whether's it's a Shoutcast stream or an IceCast stream.
+	</Jumbotron>
+	<Hero Title="Get it!" ImageSource="assets/applogos/OfficialAppIcon-MediaBoom-512.png" Buttons="@DownloadCallbacks">
+		Try out MediaBoom today by clicking on the buttons below!
+	</Hero>
+</body>
+
+@code
+{
+	FeatureDescriptor[] AppFeatures =>
+	[
+		new()
+		{
+			IconClass = "fa-solid fa-list",
+			Title = "Playlists",
+			Description =
+				"You can build a queue of songs that will be played in the order that you prefer to make " +
+				"a list of music that will make you feel either excited or relaxed."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-video",
+			Title = "Video Preview",
+			Description =
+				"MediaBoom also allows you to preview the video when it's being played, straight in your " +
+				"terminal, thanks to Terminaux and its powerful features."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-file-video",
+			Title = "Many Formats",
+			Description =
+				"MPV supports lots of media formats, such as audio formats like MP3 and M4A and video formats " +
+				"like MP4 and AVI, that MPV supports to cover a wider range of media files and streams."
+		},
+		new()
+		{
+			IconClass = "fa-solid fa-terminal",
+			Title = "Made with Terminaux",
+			Description =
+				"Terminaux provides a plethora of features that made MediaBoom look attractive and responsive, " +
+				"with rounded corners, colors, and resizable elements."
+		},
+	];
+
+	SlideDescriptor[] Slides =>
+	[
+		new()
+		{
+			Picture = "assets/products/mediaboom/mb-01.png",
+			Title = "Music Player",
+			Description =
+				"Music Player allows you to play media files found in your hard disk."
+		},
+		new()
+		{
+			Picture = "assets/products/mediaboom/mb-02.png",
+			Title = "Video Preview",
+			Description =
+				"Radio Player allows you to preview videos being played."
+		},
+		new()
+		{
+			Picture = "assets/products/mediaboom/mb-03.png",
+			Title = "Radio Player",
+			Description =
+				"Radio Player allows you to play radio stations found online."
+		},
+	];
+
+	ButtonAction[] DownloadCallbacks =>
+	[
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/MediaBoom/releases", "_blank"), "Download now"),
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://github.com/Aptivi/MediaBoom", "_blank"), "Source code"),
+		new(this, async () => await JSRuntime.InvokeVoidAsync("open", "https://aptivi.gitbook.io/aptivi/mediaboom-manual", "_blank"), "Documentation")
+	];
+}

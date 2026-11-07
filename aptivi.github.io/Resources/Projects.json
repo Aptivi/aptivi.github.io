@@ -137,8 +137,30 @@
         "ProjectHasLanding": true,
         "ProjectSupportPolicy": [
             {
-                "PolicySeries": "v0.2.x",
-                "PolicySupportStart": "09/16/2024"
+                "PolicySeries": "v1.0.x",
+                "PolicySupportStart": "05/01/2031"
+            }
+        ]
+    },
+    {
+        "ProjectName": "MediaBoom",
+        "Description": "A cross-platform media app and library that allows you to play media files and internet radio stations. It provides you with a Basolia API to give your applications capabilities to play media files and streams.",
+        "ProjectSlug": "MediaBoom",
+        "ProjectGLSlug": "main/MediaBoom",
+        "ProjectGBSlug": "mediaboom-manual",
+        "NuGetPackages": [
+            {
+                "PackageName": "MediaBoom.Basolia"
+            },
+            {
+                "PackageName": "MediaBoom.Native"
+            }
+        ],
+        "ProjectHasLanding": true,
+        "ProjectSupportPolicy": [
+            {
+                "PolicySeries": "v1.0.x",
+                "PolicySupportStart": "11/05/2031"
             }
         ]
     },
